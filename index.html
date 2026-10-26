@@ -1,0 +1,1345 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Guía de estudio de Antropología, Experiencia 2 (semanas 7 a 11): temas, mapas, preguntas con respuesta y prueba de autoevaluación.">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}</style>
+<title>Guía Antropología EXP2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Caveat:wght@600&display=swap">
+<style>
+/* Layout: cuaderno de estudio — barra de pestañas fija arriba, una columna de lectura (~68ch), notas "a mano" en los márgenes del razonamiento */
+:root{
+  --paper:#EEF1F5; --sheet:#FFFFFF; --ink:#172033; --ink-2:#4D576B; --rule:#D5DBE5;
+  --accent:#2B45B0; --accent-ink:#FFFFFF; --accent-soft:#E2E7F8; --mark:rgba(255,214,48,.62);
+  --ok:#1B7348; --ok-soft:#E0F2E8; --bad:#B0312A; --bad-soft:#FAE5E3;
+  --t0:#3B4458; --t1:#BE3A64; --t2:#0D7672; --t3:#4750C2; --t4:#7A47A6; --t5:#A86210;
+  --f-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-body:"Atkinson Hyperlegible","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-note:"Caveat","Segoe Print","Bradley Hand",cursive;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F131B; --sheet:#171C27; --ink:#E6EAF2; --ink-2:#A2ABBE; --rule:#2A3142;
+    --accent:#9AAEFF; --accent-ink:#0F131B; --accent-soft:#1F2742; --mark:rgba(255,214,64,.28);
+    --ok:#6CD39D; --ok-soft:#14301F; --bad:#FF8F86; --bad-soft:#3A1A19;
+    --t0:#B9C1D3; --t1:#F2789E; --t2:#43C6C0; --t3:#9CA3FF; --t4:#C69BEB; --t5:#EBA453;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F131B; --sheet:#171C27; --ink:#E6EAF2; --ink-2:#A2ABBE; --rule:#2A3142;
+  --accent:#9AAEFF; --accent-ink:#0F131B; --accent-soft:#1F2742; --mark:rgba(255,214,64,.28);
+  --ok:#6CD39D; --ok-soft:#14301F; --bad:#FF8F86; --bad-soft:#3A1A19;
+  --t0:#B9C1D3; --t1:#F2789E; --t2:#43C6C0; --t3:#9CA3FF; --t4:#C69BEB; --t5:#EBA453;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.wrap{max-width:820px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.1rem,8vw,3.3rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.55rem,5.5vw,2.1rem);font-weight:800;letter-spacing:-.01em}
+h3{font-size:1.2rem;font-weight:800;margin-top:6px}
+h4{font-size:1.02rem;font-weight:800}
+p{margin:0}
+a{color:var(--accent)}
+.hl{background:linear-gradient(transparent 56%,var(--mark) 56%);padding:0 .1em}
+.muted{color:var(--ink-2)}
+.eyebrow{font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.note{font-family:var(--f-note);font-size:1.3rem;line-height:1.1;color:var(--accent)}
+[data-t="0"]{--tc:var(--t0)} [data-t="1"]{--tc:var(--t1)} [data-t="2"]{--tc:var(--t2)} [data-t="3"]{--tc:var(--t3)} [data-t="4"]{--tc:var(--t4)} [data-t="5"]{--tc:var(--t5)}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--tc,var(--ink-2));border:1px solid color-mix(in srgb,var(--tc,var(--ink-2)) 45%,transparent);border-radius:999px;padding:2px 10px;white-space:nowrap}
+.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--tc,var(--ink-2))}
+.chip.plain::before{display:none}
+
+/* header */
+.top{padding-block:28px 22px}
+.top .wrap{display:grid;gap:12px}
+.lead{font-size:1.08rem;color:var(--ink-2);max-width:62ch}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;background:var(--paper);border-bottom:1px solid var(--rule)}
+.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-block:8px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:700 .95rem var(--f-body);color:var(--ink-2);background:transparent;border:0;border-radius:999px;padding:8px 14px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.tab:focus-visible,.btn:focus-visible,.sub:focus-visible,.opt:focus-visible,summary:focus-visible,.flash:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+main{padding-block:26px 80px}
+.view{display:grid;gap:26px}
+.stack{display:grid;gap:14px}
+.read{max-width:68ch}
+
+/* sub nav */
+.subs{display:flex;flex-wrap:wrap;gap:8px}
+.sub{font:700 .88rem var(--f-body);color:var(--tc,var(--ink));background:var(--sheet);border:1.5px solid color-mix(in srgb,var(--tc,var(--ink)) 35%,var(--rule));border-radius:999px;padding:6px 13px;cursor:pointer}
+.sub[aria-pressed="true"]{background:var(--tc,var(--ink));color:var(--sheet);border-color:var(--tc,var(--ink))}
+
+/* blocks */
+.box{background:var(--sheet);border:1px solid var(--rule);border-radius:14px;padding:18px}
+.idea{border-left:5px solid var(--tc,var(--accent));background:var(--sheet);border-radius:0 14px 14px 0;padding:16px 18px;display:grid;gap:8px}
+.layers{display:grid;gap:14px}
+.layer{display:grid;gap:4px}
+.layer .lbl{font-size:.75rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--tc,var(--accent))}
+dl.cx{display:grid;gap:16px;margin:0}
+dl.cx dt{font-family:var(--f-display);font-weight:800;font-size:1.06rem}
+dl.cx dd{margin:4px 0 0;display:grid;gap:6px}
+.why{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:baseline}
+.why .note{font-size:1.25rem;white-space:nowrap}
+ul.clean{margin:0;padding-left:1.15em;display:grid;gap:6px}
+.quote{font-family:var(--f-display);font-weight:600;font-size:1.22rem;line-height:1.3;border-top:2px solid var(--tc,var(--ink));padding-top:12px}
+
+/* tables */
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:12px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.95rem}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--f-display);font-weight:800;font-size:.92rem;background:color-mix(in srgb,var(--tc,var(--accent)) 10%,var(--sheet))}
+td:first-child{font-weight:700;color:var(--ink-2)}
+.tbl.wide table{min-width:640px}
+
+/* five characteristics */
+.grid5{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px}
+.cell{background:var(--sheet);border:1px solid var(--rule);border-radius:12px;padding:14px;display:grid;gap:6px;align-content:start}
+.cell h4{color:var(--tc)}
+.vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+.vs .cell.bad{border-top:4px solid var(--bad)}
+.vs .cell.good{border-top:4px solid var(--ok)}
+.three{display:grid;gap:12px}
+.three .cell{border-left:5px solid var(--rule)}
+.three .cell.n{border-left-color:var(--bad)}
+.three .cell.i{border-left-color:var(--t5)}
+.three .cell.g{border-left-color:var(--ok)}
+.tag{font-size:.82rem;color:var(--ink-2)}
+.tag b{color:var(--ink)}
+
+/* resources */
+.recs{display:grid;gap:12px}
+.rec{background:var(--sheet);border:1px solid var(--rule);border-radius:12px;padding:14px 16px;display:grid;gap:8px}
+.rec .head{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;justify-content:space-between}
+.rec h4{font-size:1.04rem}
+.rec .kind{font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2);font-weight:700}
+.rec .use{border-top:1px dashed var(--rule);padding-top:8px}
+
+/* maps */
+.map{--tc:var(--accent)}
+.m-root{background:var(--tc);color:var(--sheet);font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;padding:12px 16px;border-radius:12px;display:grid;gap:2px}
+.m-root small{font-family:var(--f-body);font-weight:400;font-size:.88rem;opacity:.92;letter-spacing:0}
+.m-trunk{margin-left:22px;border-left:2px solid var(--tc)}
+.m-br{position:relative;padding:12px 0 0 28px}
+.m-br::before{content:"";position:absolute;left:0;top:44px;width:24px;border-top:2px solid var(--tc)}
+.m-br:last-child::after{content:"";position:absolute;left:-2px;top:46px;bottom:0;width:2px;background:var(--paper)}
+.m-link{display:block;font-family:var(--f-note);font-size:1.28rem;line-height:1.05;color:var(--tc);min-height:24px}
+.m-node{background:var(--sheet);border:1.5px solid var(--tc);border-radius:10px;padding:9px 12px;display:grid;gap:3px}
+.m-node b{font-family:var(--f-display);font-weight:800}
+.m-node small{color:var(--ink-2);font-size:.9rem;line-height:1.45}
+.m-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:8px}
+.m-pair .m-node.neg{border-style:dashed}
+.chain{display:grid;justify-items:stretch;gap:0}
+.c-node{border-radius:12px;padding:12px 14px;background:var(--sheet);border:1.5px solid var(--tc);display:grid;gap:3px}
+.c-node b{font-family:var(--f-display);font-weight:800;color:var(--tc)}
+.c-node small{color:var(--ink-2);font-size:.92rem}
+.c-node.solid{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.c-node.solid small{color:color-mix(in srgb,var(--paper) 80%,transparent)}
+.c-node.solid b{color:var(--paper)}
+.c-arrow{display:grid;grid-template-columns:24px 1fr;align-items:center;gap:10px;padding:4px 0 4px 14px}
+.c-arrow i{display:block;width:2px;height:34px;background:var(--ink-2);position:relative;justify-self:center}
+.c-arrow i::after{content:"";position:absolute;left:-5px;bottom:-2px;border:6px solid transparent;border-top:8px solid var(--ink-2);border-bottom:0}
+.c-arrow span{font-family:var(--f-note);font-size:1.3rem;color:var(--ink-2)}
+
+/* questions */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.qlist{display:grid;gap:12px}
+.qcard{background:var(--sheet);border:1px solid var(--rule);border-radius:14px;padding:16px;display:grid;gap:10px}
+.qcard .meta{display:flex;flex-wrap:wrap;gap:6px}
+.qcard h3{font-size:1.08rem;font-weight:800;margin:0}
+details.ans{border-top:1px solid var(--rule);padding-top:10px}
+details.ans summary{cursor:pointer;font-weight:700;color:var(--accent);list-style:none;display:flex;align-items:center;gap:8px}
+details.ans summary::-webkit-details-marker{display:none}
+details.ans summary::before{content:"+";display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--accent);font-size:.95rem;line-height:1}
+details.ans[open] summary::before{content:"−"}
+.abody{display:grid;gap:12px;margin-top:12px}
+.ablock{display:grid;gap:4px}
+.ablock .lbl{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+.ablock.p .lbl{font-family:var(--f-note);font-size:1.3rem;letter-spacing:0;text-transform:none;color:var(--accent);font-weight:600}
+.ablock.s{background:var(--accent-soft);border-radius:10px;padding:10px 12px}
+.ablock.s .lbl{color:var(--accent)}
+
+/* buttons */
+.btn{font:700 .92rem var(--f-body);border-radius:10px;padding:9px 14px;cursor:pointer;border:1.5px solid var(--ink);background:transparent;color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn.small{padding:6px 11px;font-size:.85rem}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+
+/* quiz */
+.score{position:sticky;top:calc(env(safe-area-inset-top,0px) + 58px);z-index:6;background:var(--sheet);border:1px solid var(--rule);border-radius:14px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between}
+.score .big{font-family:var(--f-display);font-weight:800;font-size:1.5rem;font-variant-numeric:tabular-nums}
+.score .lab{font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2);font-weight:700}
+.score .k{display:grid;gap:0}
+.bar{height:6px;border-radius:6px;background:var(--rule);overflow:hidden;flex:1 1 140px;min-width:120px}
+.bar i{display:block;height:100%;background:var(--ok);width:0;transition:width .3s}
+.qz{display:grid;gap:12px}
+.qitem{background:var(--sheet);border:1px solid var(--rule);border-radius:14px;padding:16px;display:grid;gap:10px}
+.qitem .num{font-variant-numeric:tabular-nums;color:var(--ink-2);font-weight:700;font-size:.85rem}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;font:400 1rem/1.45 var(--f-body);color:var(--ink);background:var(--paper);border:1.5px solid var(--rule);border-radius:10px;padding:10px 12px;cursor:pointer;display:grid;grid-template-columns:26px 1fr;gap:8px}
+.opt .l{font-weight:700;color:var(--ink-2)}
+.opt:disabled{cursor:default}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt.right .l{color:var(--ok)} .opt.wrong .l{color:var(--bad)}
+.fb{border-radius:10px;padding:10px 12px;font-size:.96rem}
+.fb.ok{background:var(--ok-soft)} .fb.no{background:var(--bad-soft)}
+.fb b{display:block}
+.fb.ok b{color:var(--ok)} .fb.no b{color:var(--bad)}
+
+/* desarrollo */
+.dev{background:var(--sheet);border:1px solid var(--rule);border-radius:14px;padding:16px;display:grid;gap:12px}
+textarea{width:100%;min-height:150px;resize:vertical;font:400 1rem/1.5 var(--f-body);color:var(--ink);background:var(--paper);border:1.5px solid var(--rule);border-radius:10px;padding:10px 12px}
+.rubric{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.rubric label{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start;cursor:pointer}
+.rubric input{width:18px;height:18px;margin-top:4px;accent-color:var(--ok)}
+.level{font-weight:700}
+.model{background:var(--paper);border-radius:10px;padding:12px 14px;border:1px dashed var(--rule)}
+
+/* glossary */
+.gsearch{width:100%;font:400 1rem var(--f-body);color:var(--ink);background:var(--sheet);border:1.5px solid var(--rule);border-radius:10px;padding:10px 12px}
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:10px}
+.flash{text-align:left;font:inherit;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-top:4px solid var(--tc);border-radius:12px;padding:14px;cursor:pointer;display:grid;gap:8px;align-content:start;min-height:112px}
+.flash b{font-family:var(--f-display);font-weight:800;font-size:1.05rem}
+.flash .def{font-size:.95rem;color:var(--ink)}
+.flash .hint{font-size:.82rem;color:var(--ink-2)}
+
+/* trap table */
+.traps{display:grid;gap:10px}
+.trap{display:grid;grid-template-columns:1fr;gap:6px;background:var(--sheet);border:1px solid var(--rule);border-left:5px solid var(--tc);border-radius:0 12px 12px 0;padding:12px 14px}
+.trap .x{color:var(--bad);font-weight:700}
+.trap .v{color:var(--ok);font-weight:700}
+.steps{counter-reset:s;display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--paper);font-weight:700;font-family:var(--f-display)}
+.example{background:var(--accent-soft);border-radius:12px;padding:14px 16px;display:grid;gap:8px}
+.example .seg{display:grid;gap:2px}
+.example .seg span{font-family:var(--f-note);font-size:1.2rem;color:var(--accent);line-height:1}
+footer{color:var(--ink-2);font-size:.88rem}
+@media (min-width:700px){
+  .trap{grid-template-columns:150px 1fr 1fr;align-items:start}
+  .layers{grid-template-columns:1fr 1.4fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow"><span>FCE1100</span><span>·</span><span>Experiencia 2</span><span>·</span><span>Semanas 7 a 11</span></div>
+    <h1>Guía de Antropología</h1>
+    <p class="lead">Todo lo de la unidad en un solo lugar: las ideas de cada clase explicadas en simple y en completo, mapas para memorizar, las preguntas del curso con respuesta y su <span class="hl">por qué</span>, y una prueba para medirte antes de la de verdad.</p>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Secciones">
+  <div class="wrap">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tab-inicio" data-view="inicio" aria-selected="true">Inicio</button>
+      <button class="tab" role="tab" id="tab-temas" data-view="temas" aria-selected="false">Temas</button>
+      <button class="tab" role="tab" id="tab-mapas" data-view="mapas" aria-selected="false">Mapas</button>
+      <button class="tab" role="tab" id="tab-preguntas" data-view="preguntas" aria-selected="false">Preguntas</button>
+      <button class="tab" role="tab" id="tab-prueba" data-view="prueba" aria-selected="false">Ponte a prueba</button>
+      <button class="tab" role="tab" id="tab-glosario" data-view="glosario" aria-selected="false">Glosario</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+<!-- ===================== INICIO ===================== -->
+<section class="view" id="v-inicio" role="tabpanel" aria-labelledby="tab-inicio">
+
+  <div class="stack read">
+    <h2>Qué te van a evaluar</h2>
+    <p>Cada clase tiene un <b>indicador de logro</b>. Fíjate en los verbos: <span class="hl">diferencia, argumenta, contrasta, identifica, examina</span>. La prueba no pide solo definir: pide distinguir dos cosas, decir cuál es mejor y por qué, y aplicarlo a un caso o a tu vida.</p>
+  </div>
+
+  <div class="tbl wide">
+    <table>
+      <thead><tr><th>Clase</th><th>Lo que debes poder hacer</th><th>Conceptos clave</th></tr></thead>
+      <tbody>
+        <tr><td>S7 · Amor</td><td>Distinguir el amor basado solo en el sentimiento del amor que integra razón, emoción y voluntad.</td><td>Amor como decisión · integración razón-emoción-voluntad · donación</td></tr>
+        <tr><td>S8 · Relaciones (IL 2.2)</td><td>Diferenciar la lógica del uso de la del reconocimiento en relaciones cotidianas o laborales, y argumentar cuál respeta la dignidad.</td><td>Vínculos auténticos · reconocimiento del otro · relacionalidad constitutiva</td></tr>
+        <tr><td>S9 · Soledad</td><td>Contrastar la soledad de aislamiento con la soledad fecunda e identificar hábitos que dificultan o favorecen el autoconocimiento.</td><td>Soledad que construye vs. soledad que empobrece · interioridad · autoconocimiento activo</td></tr>
+        <tr><td>S10 · Dolor</td><td>Distinguir las tres formas de relacionarse con el dolor (negar, instalarse, integrar) y argumentar cuál abre crecimiento.</td><td>Fragilidad humana · sentido del sufrimiento · transformación por el dolor</td></tr>
+        <tr><td>S11 · Consumo (IL 2.4)</td><td>Examinar tus patrones de consumo: necesidades reales o sustitutos de sentido, frente a una relación libre y ordenada con los bienes.</td><td>Consumismo como lógica existencial · uso responsable de los bienes · sentido más allá de lo material</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="stack">
+    <h2>La fórmula del 7</h2>
+    <p class="read">Usa esta estructura en cualquier pregunta de desarrollo. Una respuesta que tiene los cinco pasos casi siempre cumple la pauta completa.</p>
+    <ol class="steps read">
+      <li><div><b>Define</b> el concepto con tus palabras, en una o dos oraciones.</div></li>
+      <li><div><b>Distingue</b>: contrástalo con su opuesto (uso vs. reconocimiento, aislamiento vs. fecunda, negar vs. integrar).</div></li>
+      <li><div><b>Ejemplifica</b> con un recurso de clase (canción, película, caso) o con un ejemplo concreto.</div></li>
+      <li><div><b>Argumenta el por qué</b>: conéctalo con la dignidad de la persona, la libertad o el sentido.</div></li>
+      <li><div><b>Aplica</b> a tu vida o a tu profesión, si la pregunta lo pide, y cierra con una conclusión propia.</div></li>
+    </ol>
+    <div class="example read">
+      <p><b>Ejemplo.</b> Pregunta: <i>¿Qué lógica de relación respeta la dignidad de la persona?</i></p>
+      <div class="seg"><span>define</span><p>La lógica del reconocimiento valora al otro por quien es, no por lo que me produce.</p></div>
+      <div class="seg"><span>distingue</span><p>La lógica del uso, en cambio, lo trata como herramienta: cuando deja de servir, se descarta.</p></div>
+      <div class="seg"><span>ejemplifica</span><p>Le pasó a Camila: doce compañeros le pidieron los apuntes y nadie la saludó en su cumpleaños.</p></div>
+      <div class="seg"><span>por qué</span><p>Respeta la dignidad el reconocimiento, porque la persona vale por sí misma, no por su utilidad; usarla la reduce a cosa.</p></div>
+      <div class="seg"><span>aplica</span><p>En mi trabajo, reconocer a un cliente estresado es escucharlo antes de resolver, no despacharlo como un número.</p></div>
+    </div>
+  </div>
+
+  <div class="stack">
+    <h2>El hilo de toda la unidad</h2>
+    <p class="read">Las cinco clases dicen lo mismo desde cinco lados: <span class="hl">la persona vale por lo que es</span>, no por lo que siente, produce, aparenta o tiene, y se realiza cuando se da a otros. Cada semana desarma una medida falsa de la persona. Si entiendes esta tabla, puedes conectar cualquier pregunta con el resto de la unidad, que es lo que distingue un 6 de un 7.</p>
+    <div class="traps">
+      <div class="trap" data-t="1"><span class="chip">S7 · Amor</span><span><span class="x">Trampa:</span> amo mientras siento.</span><span><span class="v">El curso:</span> amar es decidir buscar el bien del otro.</span></div>
+      <div class="trap" data-t="2"><span class="chip">S8 · Relaciones</span><span><span class="x">Trampa:</span> el otro vale por lo que me produce.</span><span><span class="v">El curso:</span> el otro vale por quien es (reconocimiento).</span></div>
+      <div class="trap" data-t="3"><span class="chip">S9 · Soledad</span><span><span class="x">Trampa:</span> vivir reaccionando a estímulos, huir del silencio.</span><span><span class="v">El curso:</span> la interioridad me hace protagonista y me prepara para darme.</span></div>
+      <div class="trap" data-t="4"><span class="chip">S10 · Dolor</span><span><span class="x">Trampa:</span> el dolor me define, o hago como si no existiera.</span><span><span class="v">El curso:</span> integrarlo: me forma, pero no me define.</span></div>
+      <div class="trap" data-t="5"><span class="chip">S11 · Consumo</span><span><span class="x">Trampa:</span> valgo por lo que tengo y muestro.</span><span><span class="v">El curso:</span> las cosas en su lugar, al servicio de la vida.</span></div>
+    </div>
+  </div>
+
+  <div class="stack read">
+    <h2>Errores que bajan la nota</h2>
+    <ul class="clean">
+      <li>Responder solo con la definición, sin distinguir ni argumentar.</li>
+      <li>Opinar sin conceptos del curso ("yo creo que el amor es lo más bonito").</li>
+      <li>Confundir pares clave: emoción con sentimiento, estar solo con estar aislado, integrar con olvidar, consumo con consumismo.</li>
+      <li>Moralizar: el curso no dice que las cosas, la soledad o la utilidad sean malas; dice que hay que ordenarlas.</li>
+      <li>Decir que negar o instalarse "están mal" sin explicar por qué (impiden aprender, crean identidad de víctima).</li>
+      <li>Contar la escena o la canción en vez de analizarla con los conceptos.</li>
+    </ul>
+  </div>
+
+  <div class="stack read">
+    <h2>Plan para estudiar en una hora</h2>
+    <ol class="steps">
+      <li><div>Lee el <b>mapa general</b> y los cinco mapas (10 min). Tápalos y repítelos en voz alta.</div></li>
+      <li><div>Haz la prueba de <b>alternativas</b> completa (15 min). Mira la nota estimada.</div></li>
+      <li><div>Repasa en <b>Temas</b> solo las semanas donde fallaste (15 min).</div></li>
+      <li><div>Escribe dos <b>desarrollos</b> y corrígelos con la pauta (15 min).</div></li>
+      <li><div>Termina con el <b>glosario</b> en modo tarjetas (5 min).</div></li>
+    </ol>
+  </div>
+
+  <footer class="read">Ojo: en tus archivos, el PPT llamado "Semana 7" trae la clase de relaciones y el "Semana 8" la de amor; aquí van en el orden real. Algunas descripciones de clase venían con el texto cortado en el PDF, así que esas partes están completadas según lo que se alcanza a leer. Para los videos y películas, contrasta con tus apuntes de clase.</footer>
+</section>
+
+<!-- ===================== TEMAS ===================== -->
+<section class="view" id="v-temas" role="tabpanel" aria-labelledby="tab-temas" hidden>
+  <div class="subs" id="temaSubs">
+    <button class="sub" data-t="1" data-tema="1" aria-pressed="true">S7 Amor</button>
+    <button class="sub" data-t="2" data-tema="2" aria-pressed="false">S8 Relaciones</button>
+    <button class="sub" data-t="3" data-tema="3" aria-pressed="false">S9 Soledad</button>
+    <button class="sub" data-t="4" data-tema="4" aria-pressed="false">S10 Dolor</button>
+    <button class="sub" data-t="5" data-tema="5" aria-pressed="false">S11 Consumo</button>
+  </div>
+
+  <!-- TEMA 1 -->
+  <article class="view" data-t="1" data-tema-panel="1">
+    <div class="stack">
+      <div class="eyebrow"><span class="chip">Semana 7</span><span>Amor como decisión · Razón, emoción y voluntad · Donación</span></div>
+      <h2>Amar: ¿sentir o decidir?</h2>
+      <p class="muted read">Pregunta guía: ¿el amor termina automáticamente cuando cambia el sentimiento? ¿Y en la amistad o la familia?</p>
+    </div>
+    <div class="idea read">
+      <span class="note">Idea central</span>
+      <p>El amor no es solo algo que "me pasa". Es una <span class="hl">respuesta libre ante el bien</span> que descubro en otra persona: empieza muchas veces como emoción, pero se sostiene cuando la razón (conozco al otro), la emoción (lo siento) y la voluntad (decido buscar su bien) trabajan juntas. Por eso "ya no siento lo mismo" no tiene por qué ser el final: puede ser el momento en que el amor pasa de sentirse a elegirse.</p>
+    </div>
+    <div class="layers read">
+      <div class="layer"><span class="lbl">En simple</span><p>Sentir es el motor de arranque; decidir es el combustible del viaje.</p></div>
+      <div class="layer"><span class="lbl">Para la prueba</span><p>El amor implica emociones, pero no se reduce a ellas: es una acción libre que integra razón, emoción y voluntad, y que busca el bien del otro por sí mismo. Por eso es estable y se puede prometer.</p></div>
+    </div>
+
+    <div class="stack read">
+      <h3>Conceptos clave</h3>
+      <dl class="cx">
+        <div><dt>No existe la indiferencia</dt><dd><p>Las cosas y personas despiertan en nosotros tendencias: nos atraen o nos generan rechazo. El amor parte como respuesta a algo que percibimos como bueno.</p><div class="why"><span class="note">¿por qué?</span><p>Explica que el amor tiene una base afectiva natural, pero que no se queda ahí.</p></div></dd></div>
+        <div><dt>Nadie ama lo que no conoce</dt><dd><p>Amar requiere conocer a la persona real, con sus defectos. Me puedo entusiasmar con alguien que no conozco, pero eso todavía no es amor maduro.</p><div class="why"><span class="note">¿por qué?</span><p>Es el papel de la <b>razón</b>: por eso el amor crece con el tiempo y el trato.</p></div></dd></div>
+        <div><dt>El amor es una acción que surge ante algo bueno</dt><dd><p>No es pasivo: salgo hacia el otro porque reconozco su valor.</p></dd></div>
+        <div><dt>Cuerpo y espíritu</dt><dd><p>El amor implica emociones (dimensión corporal) y es libre (dimensión espiritual: inteligencia y voluntad).</p><div class="why"><span class="note">¿por qué?</span><p>Nadie puede prometer una emoción, pero sí una decisión. Por eso el amor se puede prometer.</p></div></dd></div>
+      </dl>
+    </div>
+
+    <div class="stack">
+      <h3>Emoción y sentimiento</h3>
+      <div class="tbl"><table>
+        <thead><tr><th></th><th>Emoción</th><th>Sentimiento</th></tr></thead>
+        <tbody>
+          <tr><td>Duración</td><td>Breve: aparece y se va</td><td>Más estable, se prolonga</td></tr>
+          <tr><td>Origen</td><td>Reacción espontánea ante un estímulo</td><td>Elaboración consciente de lo vivido</td></tr>
+          <tr><td>Cuerpo</td><td>Muy corporal: pulso, "mariposas", rabia</td><td>Más interior</td></tr>
+          <tr><td>Control</td><td>No la elijo</td><td>Puedo cultivarlo o descuidarlo</td></tr>
+          <tr><td>Ejemplo</td><td>La atracción al conocer a alguien</td><td>El cariño estable por un amigo de años</td></tr>
+        </tbody>
+      </table></div>
+      <p class="read">Conclusión del curso: el amor <span class="hl">no es variable, sino estable y permanente</span>. Implica emociones y sentimientos, pero lo que le da estabilidad es la voluntad.</p>
+    </div>
+
+    <div class="stack">
+      <h3>Las cinco características del amor</h3>
+      <div class="grid5">
+        <div class="cell"><h4>Identificación</h4><p>Reconozco al amado como igual a mí: compartimos la misma naturaleza y dignidad.</p><p class="tag"><b>Sin ella:</b> dominio o idolatría.</p></div>
+        <div class="cell"><h4>Donación</h4><p>Salgo de mi egocentrismo y busco el bien del otro. Es el centro del amor.</p><p class="tag"><b>Sin ella:</b> egoísmo de a dos.</p></div>
+        <div class="cell"><h4>Reciprocidad</h4><p>Hay correspondencia y correlación con la persona amada: el amor se responde.</p><p class="tag"><b>Sin ella:</b> uno da y el otro solo recibe.</p></div>
+        <div class="cell"><h4>Compromiso</h4><p>Lealtad y fidelidad: una promesa tácita de estar en las buenas y en las malas.</p><p class="tag"><b>Sin él:</b> entusiasmo pasajero.</p></div>
+        <div class="cell"><h4>Sacrificio</h4><p>Quien ama está dispuesto a renunciar a algo propio, incluso a actos heroicos como dar la vida.</p><p class="tag"><b>Ojo:</b> no es dejarse anular ni maltratar.</p></div>
+      </div>
+    </div>
+
+    <div class="stack">
+      <h3>Amor-sentimiento ("líquido") vs. amor como decisión</h3>
+      <div class="tbl"><table>
+        <thead><tr><th></th><th>Solo sentimiento</th><th>Decisión integrada</th></tr></thead>
+        <tbody>
+          <tr><td>Pregunta central</td><td>¿Qué siento yo? ¿Qué me aportas?</td><td>¿Qué es bueno para el otro?</td></tr>
+          <tr><td>Cuando baja la emoción</td><td>Se termina: "ya no siento lo mismo"</td><td>Se renueva con la voluntad</td></tr>
+          <tr><td>Duración</td><td>Mientras dure la satisfacción</td><td>Se sostiene en el tiempo</td></tr>
+          <tr><td>Libertad</td><td>Depende de lo que me pasa</td><td>Es elegido, por eso libre</td></tr>
+          <tr><td>Recurso</td><td>Un Ratito (Bad Bunny)</td><td>Sam carga a Frodo</td></tr>
+        </tbody>
+      </table></div>
+      <p class="read muted">"Líquido" viene del sociólogo Zygmunt Bauman (<i>Amor líquido</i>, 2003): relaciones frágiles que se desarman apenas dejan de satisfacer. Nombrarlo suma puntos.</p>
+    </div>
+
+    <div class="stack read">
+      <h3>Cuando las tres dimensiones se separan, el amor se deforma</h3>
+      <ul class="clean">
+        <li><b>Solo emoción</b>: amor impulsivo e inestable; dura lo que dura la emoción.</li>
+        <li><b>Solo razón</b>: amor calculador; "me conviene".</li>
+        <li><b>Solo voluntad</b>: amor rígido, pura obligación sin cariño.</li>
+        <li><b>Las tres integradas</b>: amor maduro, libre y capaz de sostenerse en el tiempo.</li>
+      </ul>
+      <p><b>Amor maduro:</b> cambia el eje. Ya no se trata de "qué siento" ni de "qué me aportas", sino de querer el bien del otro por sí mismo. El curso lo llama el giro más contracultural, porque hoy medimos las relaciones por la satisfacción que nos dan.</p>
+    </div>
+
+    <div class="stack read">
+      <h3>Qué no es amor: el amor tóxico</h3>
+      <p>Control (revisar el celular, decidir con quién se junta el otro), celos posesivos, aislar al otro de su familia y amigos, humillación, chantaje emocional y dependencia ("sin ti no soy nada"). Puede haber emociones muy intensas, pero no hay amor.</p>
+      <div class="why"><span class="note">¿por qué?</span><p>Falla la <b>identificación</b> (el otro se trata como posesión, no como igual) y falla la <b>donación</b> (se busca la propia seguridad o placer, no el bien del otro). Intensidad no es lo mismo que amor.</p></div>
+    </div>
+
+    <div class="stack">
+      <h3>Recursos de clase y cómo usarlos</h3>
+      <div class="recs">
+        <div class="rec"><div class="head"><h4>Un Ratito · Bad Bunny</h4><span class="kind">Canción</span></div><p>Propone una relación pasajera: disfrutar un momento, sin promesas ni futuro. El otro aparece como algo que se disfruta por un rato, no como alguien valioso en sí mismo.</p><p class="use"><b>Úsalo como:</b> ejemplo de amor por deleite y de emoción sin voluntad. Faltan compromiso, reciprocidad estable y donación. La frase que elijas debe mostrar lo temporal y la ausencia de compromiso.</p></div>
+        <div class="rec"><div class="head"><h4>Best Part of Me · Ed Sheeran</h4><span class="kind">Canción</span></div><p>Él se presenta con defectos, inseguridades y errores, y cuenta que lo aman igual, completo. El amor que recibe no depende de que sea perfecto.</p><p class="use"><b>Úsalo como:</b> contraste con Un Ratito. Aquí la persona vale por sí misma: identificación, donación y compromiso. Allá, vale por el momento.</p></div>
+        <div class="rec"><div class="head"><h4>Sam carga a Frodo · El Señor de los Anillos</h4><span class="kind">Película</span></div><p>Sam está agotado y con miedo; seguramente no "tiene ganas" de cargarlo. Lo hace por lealtad y por una decisión ya tomada: no dejar solo a su amigo.</p><p class="use"><b>Úsalo como:</b> amor como decisión, compromiso y sacrificio. Hay emoción, pero pesa más la decisión. Un "Sam" en tu carrera: el compañero que, cuando cometes un error grave, te ayuda a corregirlo en vez de exponerte o alejarse.</p></div>
+        <div class="rec"><div class="head"><h4>¿Qué no es amor? Amor tóxico</h4><span class="kind">Video · Rutina Veo, pienso, me pregunto</span></div><p>Muestra conductas de control y posesión que se confunden con amor.</p><p class="use"><b>Úsalo como:</b> lo que veo (conductas), lo que pienso (falla identificación y donación) y lo que me pregunto (¿por qué normalizamos los celos como prueba de amor?).</p></div>
+      </div>
+    </div>
+
+    <div class="stack read">
+      <h3>Errores típicos</h3>
+      <ul class="clean">
+        <li>Decir "el amor es un sentimiento" a secas.</li>
+        <li>Creer que decidir amar significa aguantar todo. El compromiso nunca justifica la violencia.</li>
+        <li>Usar emoción y sentimiento como sinónimos.</li>
+      </ul>
+      <p class="quote">"El sentimiento puede cambiar; la decisión de buscar el bien del otro es lo que permite que el amor dure."</p>
+    </div>
+  </article>
+
+  <!-- TEMA 2 -->
+  <article class="view" data-t="2" data-tema-panel="2" hidden>
+    <div class="stack">
+      <div class="eyebrow"><span class="chip">Semana 8 · IL 2.2</span><span>Vínculos auténticos · Reconocimiento del otro · Relacionalidad constitutiva</span></div>
+      <h2>No estoy solo: el arte de construir relaciones reales</h2>
+      <p class="muted read">Pregunta guía: ¿cuántas de mis relaciones son vínculos auténticos y cuántas son conexiones funcionales que nadie eligió conscientemente?</p>
+    </div>
+    <div class="idea read">
+      <span class="note">Idea central</span>
+      <p>No somos islas: desde que nacemos dependemos de otros y nuestra identidad se forma en relación. Por eso la pregunta no es si me relaciono, sino <span class="hl">cómo</span>. Puedo usar al otro (lo valoro por lo que me produce) o reconocerlo (lo valoro por quien es). Solo la lógica del reconocimiento respeta la dignidad, porque la persona vale por sí misma y no por su utilidad.</p>
+    </div>
+    <p class="quote read">"La excelencia técnica carece de impacto real si no va unida a la capacidad de reconocer al otro como persona."</p>
+    <div class="layers read">
+      <div class="layer"><span class="lbl">En simple</span><p>Usar es "me sirves". Reconocer es "te valoro por quien eres, no por lo que me produces".</p></div>
+      <div class="layer"><span class="lbl">Para la prueba</span><p>El uso no necesita mala intención: basta con no detenerse a ver al otro como persona. Reconocer exige atención y decisión, y es lo único compatible con la dignidad humana.</p></div>
+    </div>
+
+    <div class="stack read">
+      <h3>Conceptos clave</h3>
+      <dl class="cx">
+        <div><dt>Relacionalidad constitutiva</dt><dd><p>La relación con otros es parte de lo que somos, no un agregado. Nadie se hace solo: al nacer dependemos de otros para sobrevivir, y aprendemos a hablar, confiar y querer porque alguien nos trató así. Nuestra identidad está "tallada por los rostros" de quienes nos rodearon.</p><div class="why"><span class="note">¿por qué?</span><p>No buscamos compañía "por aburrimiento": la necesitamos para ser plenamente humanos. Por eso el modo en que me relaciono dice quién soy.</p></div></dd></div>
+        <div><dt>Dignidad</dt><dd><p>El valor que toda persona tiene por el solo hecho de ser persona. No se gana ni se pierde, y no depende de su rendimiento.</p><div class="why"><span class="note">¿por qué?</span><p>Es el criterio para decidir qué lógica es correcta. Kant lo formula así: tratar a la persona siempre como fin y nunca solo como medio.</p></div></dd></div>
+        <div><dt>Vínculos auténticos: estar para otros</dt><dd><p>Se construyen con decisiones firmes, no con emociones pasajeras (une con la Semana 7). El otro no es una amenaza que me quita libertad: es el espacio donde mi humanidad se despliega.</p></dd></div>
+      </dl>
+    </div>
+
+    <div class="stack">
+      <h3>Los tres tipos de amor (Aristóteles)</h3>
+      <div class="tbl wide"><table>
+        <thead><tr><th>Tipo</th><th>Qué amo del otro</th><th>Cuándo se termina</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td>Por utilidad</td><td>El beneficio o uso que obtengo de él</td><td>Cuando deja de servirme</td><td>El compañero que solo te escribe antes de la prueba</td></tr>
+          <tr><td>Por deleite</td><td>El placer o la diversión que me causa</td><td>Cuando deja de entretenerme</td><td>El amigo "solo para carretear"</td></tr>
+          <tr><td>De amistad</td><td>Al otro mismo: quiero su bien como bien en sí, no como medio</td><td>Es estable; resiste los cambios</td><td>El amigo que aparece cuando estás enfermo</td></tr>
+        </tbody>
+      </table></div>
+      <p class="read"><b>Ojo:</b> utilidad y deleite no son malos. Es normal que un compañero de trabajo me sea útil o que un amigo me divierta. El problema es <span class="hl">reducir la relación solo a eso</span>. La amistad verdadera puede ser útil y entretenida, pero no depende de ello.</p>
+    </div>
+
+    <div class="stack">
+      <h3>Lógica del uso vs. lógica del reconocimiento</h3>
+      <div class="tbl"><table>
+        <thead><tr><th></th><th>Uso</th><th>Reconocimiento</th></tr></thead>
+        <tbody>
+          <tr><td>Cómo veo al otro</td><td>Herramienta, medio</td><td>Persona, fin en sí misma</td></tr>
+          <tr><td>Por qué lo valoro</td><td>Por lo que me produce</td><td>Por quien es</td></tr>
+          <tr><td>Si deja de servir</td><td>Lo descarto</td><td>Sigo ahí</td></tr>
+          <tr><td>¿Requiere mala intención?</td><td>No: basta con no detenerse a mirar</td><td>Requiere atención y decisión</td></tr>
+          <tr><td>En el trabajo</td><td>El cliente es una venta; el compañero, un recurso</td><td>El cliente es una persona con un problema; el compañero, alguien que aprende</td></tr>
+          <tr><td>¿Respeta la dignidad?</td><td>No: reduce a la persona a cosa</td><td>Sí: la trata como fin</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="stack">
+      <h3>Conexión vs. vínculo</h3>
+      <div class="vs">
+        <div class="cell bad"><h4>Conexión</h4><p>Contacto funcional y rápido para intercambiar información o resolver algo. Muchas, superficiales e intercambiables, como los 34 contactos de un grupo de WhatsApp.</p></div>
+        <div class="cell good"><h4>Vínculo</h4><p>Relación elegida, con presencia, compromiso y conocimiento mutuo. Pocas y profundas: las personas con las que de verdad cuento.</p></div>
+      </div>
+    </div>
+
+    <div class="stack">
+      <h3>Recursos de clase y cómo usarlos</h3>
+      <div class="recs">
+        <div class="rec"><div class="head"><h4>El caso de Camila</h4><span class="kind">Caso</span></div><p>Tiene 34 compañeros en el grupo de WhatsApp. Cuando hay prueba le llegan 12 mensajes pidiendo sus apuntes. En su cumpleaños, nadie le escribió.</p><p class="use"><b>¿Alguien actuó con mala intención?</b> Probablemente no, y ese es el punto: la lógica del uso no necesita maldad, basta con no detenerse a ver al otro como persona. Camila fue tratada como fuente de apuntes (utilidad), no reconocida por quien es. Para un 7: pregúntate si tú has sido uno de los 12.</p></div>
+        <div class="rec"><div class="head"><h4>Eso que tú me das · Jarabe de Palo</h4><span class="kind">Canción</span></div><p>Pau Donés la publicó en 2020, poco antes de morir de cáncer, como agradecimiento a quienes lo acompañaron. Cuenta que recibió más de lo que pidió o creía merecer, y que eso le hizo saber que no estaba solo.</p><p class="use"><b>El "gran regalo" de un vínculo auténtico</b> es el otro mismo y su presencia gratuita: ser querido por quien soy sin tener que ganármelo. No se compra ni se exige; se recibe y se agradece.</p></div>
+        <div class="rec"><div class="head"><h4>Un gran regalo · Nano Stern</h4><span class="kind">Canción</span></div><p>En clase se contrastó con la de Jarabe de Palo. Ambas ponen la mirada en lo que se recibe del otro como regalo, no como intercambio.</p><p class="use"><b>Úsalo como:</b> lo opuesto a la lógica del uso, donde todo se cobra o se devuelve.</p></div>
+        <div class="rec"><div class="head"><h4>Rutina "Con quién cuento" e imagen "conexión vs. vínculo"</h4><span class="kind">Rutina de pensamiento</span></div><p>Trazar tu mapa relacional: quiénes están por lo que les sirvo y quiénes por quien soy.</p><p class="use"><b>Úsalo como:</b> evidencia personal en la bitácora. Nombra un vínculo y una conexión reales.</p></div>
+        <div class="rec"><div class="head"><h4>La escena de Cristina</h4><span class="kind">Película · PPT</span></div><p>El PPT pregunta qué características del amor faltan en la escena, qué tipo de relación quiere construir Cristina y si amor y amistad son lo mismo.</p><p class="use"><b>Método:</b> revisa la escena con las cinco características (¿hay compromiso, reciprocidad, donación?), clasifica lo que busca con los tres tipos de amor y responde que la amistad es una forma de amor, pero el amor es más amplio. Ver respuesta completa en Preguntas.</p></div>
+      </div>
+    </div>
+
+    <div class="stack read">
+      <h3>Aplicación a tu profesión</h3>
+      <ul class="clean">
+        <li><b>Cliente estresado:</b> en vez de despacharlo ("siguiente"), lo escucho, nombro su preocupación, explico con calma y resuelvo.</li>
+        <li><b>Paciente asustado:</b> no es "la cama 4"; tiene nombre y miedo. Le explico lo que va a pasar.</li>
+        <li><b>Compañero que aprende más lento:</b> en vez de evitarlo porque me atrasa, le explico, le doy tiempo y valoro su avance.</li>
+        <li><b>Administración:</b> la jefatura que conoce a su equipo como personas, no solo por sus indicadores.</li>
+      </ul>
+      <h3>Errores típicos</h3>
+      <ul class="clean">
+        <li>Decir que la lógica del uso implica mala intención.</li>
+        <li>Creer que tener muchos contactos es tener muchos vínculos.</li>
+        <li>Afirmar que toda relación útil es mala.</li>
+      </ul>
+      <p class="quote">"La técnica resuelve el problema; el reconocimiento atiende a la persona que lo tiene."</p>
+    </div>
+  </article>
+
+  <!-- TEMA 3 -->
+  <article class="view" data-t="3" data-tema-panel="3" hidden>
+    <div class="stack">
+      <div class="eyebrow"><span class="chip">Semana 9</span><span>Soledad que construye vs. soledad que empobrece · Interioridad · Autoconocimiento activo</span></div>
+      <h2>¿Estar solo es lo mismo que estar aislado?</h2>
+      <p class="muted read">Pregunta guía: cuando estás solo, ¿qué haces? ¿Cuánto tiempo eres capaz de estar a solas contigo, sin hacer absolutamente nada?</p>
+    </div>
+    <div class="idea read">
+      <span class="note">Idea central</span>
+      <p>Estar solo no es el problema; lo que empobrece es el <b>aislamiento</b>, un encierro que vacía. La <b>soledad fecunda</b> es lo contrario: un tiempo elegido para entrar en la propia interioridad, hacerse las preguntas de fondo, procesar emociones y ordenar valores. No es un fin en sí misma: <span class="hl">me prepara para darme a los demás</span>, porque no puedo entregar lo que no conozco de mí.</p>
+    </div>
+    <div class="layers read">
+      <div class="layer"><span class="lbl">En simple</span><p>Aislarse es encerrarse para no sentir. Recogerse es entrar en uno mismo para comprender.</p></div>
+      <div class="layer"><span class="lbl">Para la prueba</span><p>Quien aprende a habitar su propio silencio deja de ser espectador reactivo de su vida y se vuelve protagonista. La soledad fecunda es el "taller interior" donde se prepara el don de sí.</p></div>
+    </div>
+
+    <div class="stack read">
+      <h3>Conceptos clave</h3>
+      <dl class="cx">
+        <div><dt>Existencia reactiva</dt><dd><p>Vivir respondiendo a estímulos (notificaciones, redes, ruido, urgencias) sin espacios de silencio. La sobreestimulación desplaza la interioridad: tomamos decisiones importantes sin pensarlas y armamos relaciones superficiales porque no nos detenemos a preguntarnos quiénes somos.</p></dd></div>
+        <div><dt>Interioridad</dt><dd><p>El espacio interior donde la persona se piensa, se siente y decide. Permite actuar desde dentro y no solo reaccionar.</p></dd></div>
+        <div><dt>Autoconocimiento activo</dt><dd><p>No es esperar a "descubrirme" por casualidad: es buscarlo. Hacerme preguntas, nombrar lo que siento y ver qué valores me mueven.</p></dd></div>
+        <div><dt>Autoconocimiento como condición del don</dt><dd><p>Si no sé quién soy, no sé qué estoy entregando. Mi entrega se vuelve confusa: doy por quedar bien, por miedo o por costumbre.</p><div class="why"><span class="note">¿por qué?</span><p>Une esta clase con amor y relaciones: el amor es donación, y nadie da lo que no conoce de sí.</p></div></dd></div>
+        <div><dt>Estar solo ≠ estar aislado</dt><dd><p>"Solo" describe una situación: no hay nadie al lado. "Aislado" describe una ruptura: estoy cortado de los vínculos. Se puede estar aislado en medio de mucha gente (Camila, con 34 contactos) y estar solo sin estar aislado (Hirayama).</p></dd></div>
+      </dl>
+    </div>
+
+    <div class="stack">
+      <h3>Soledad de aislamiento vs. soledad fecunda</h3>
+      <div class="tbl"><table>
+        <thead><tr><th></th><th>Aislamiento</th><th>Fecunda</th></tr></thead>
+        <tbody>
+          <tr><td>¿Se elige?</td><td>No: es un encierro involuntario</td><td>Sí: es una búsqueda activa</td></tr>
+          <tr><td>Motor</td><td>Miedo, heridas no resueltas</td><td>Deseo de conocerme</td></tr>
+          <tr><td>Qué produce</td><td>Vacío existencial, desconexión del entorno</td><td>Preguntas auténticas, calma, claridad</td></tr>
+          <tr><td>Emociones</td><td>Se evitan o ahogan</td><td>Se procesan</td></tr>
+          <tr><td>Con los otros</td><td>Me aleja</td><td>Me prepara para el encuentro</td></tr>
+          <tr><td>Imagen</td><td>Una pieza cerrada con llave</td><td>Un taller</td></tr>
+          <tr><td>Resultado</td><td>Empobrece</td><td>Da fruto (por eso "fecunda")</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="stack">
+      <h3>Hábitos que la dificultan y la favorecen</h3>
+      <div class="vs">
+        <div class="cell bad"><h4>Dificultan el autoconocimiento</h4><ul class="clean"><li>Mirar el celular al despertar y antes de dormir.</li><li>Audífonos todo el día para no "escucharse".</li><li>Scroll infinito; llenar cada espera con una pantalla.</li><li>Multitarea constante.</li><li>No tolerar un rato sin plan.</li></ul></div>
+        <div class="cell good"><h4>Favorecen el autoconocimiento</h4><ul class="clean"><li>Caminar o viajar sin pantalla.</li><li>Escribir la bitácora o un diario.</li><li>Leer; contemplar la naturaleza o el arte.</li><li>Rezar o meditar.</li><li>Preguntarse al final del día qué sentí y por qué.</li></ul></div>
+      </div>
+      <p class="read"><b>Beneficios de la soledad fecunda:</b> autoconocimiento, procesar emociones en vez de reaccionar, decisiones más libres, descanso de la sobreestimulación, creatividad y relaciones más profundas, porque doy lo que realmente soy.</p>
+    </div>
+
+    <div class="stack">
+      <h3>Recursos de clase y cómo usarlos</h3>
+      <div class="recs">
+        <div class="rec"><div class="head"><h4>Rincón · Milo J</h4><span class="kind">Canción</span></div><p>Habla desde la pérdida de alguien a quien tuvo que dejar ir. Describe noches difíciles, colores que se vuelven grises, insomnio y la sensación de no tener a dónde escapar. Cuando dice que la soledad es su lugar cómodo, la soledad funciona como refugio: estar solo lo protege de volver a ser herido.</p><p class="use"><b>Úsalo como:</b> soledad más cercana al aislamiento, porque nace de una herida no resuelta y funciona como encierro. Emociones: tristeza, nostalgia, cansancio, vacío, resignación. Matiz para un 7: su honestidad consigo mismo es una puerta posible hacia la interioridad.</p></div>
+        <div class="rec"><div class="head"><h4>Hirayama · Perfect Days (Wim Wenders, 2023)</h4><span class="kind">Película</span></div><p>Limpia baños públicos en Tokio y vive con una rutina sencilla: lee antes de dormir, escucha casetes, fotografía la luz entre los árboles y cuida sus plantas. Está solo, pero no aislado: es amable, se fija en los demás y recibe a su sobrina.</p><p class="use"><b>¿Su soledad significa estar siempre bien?</b> No. La película deja ver heridas familiares y termina con él emocionado, entre la sonrisa y las lágrimas. La soledad fecunda no elimina el dolor: da espacio para habitarlo.</p></div>
+        <div class="rec"><div class="head"><h4>Cartas a un joven poeta · Rainer Maria Rilke</h4><span class="kind">Texto · tabla comparativa</span></div><p>Rilke le aconseja a un joven que deje de buscar aprobación afuera y entre en sí mismo; que ame su soledad aunque le pese, porque allí madura lo propio; y que tenga paciencia con las preguntas que todavía no tienen respuesta.</p><p class="use"><b>Úsalo como:</b> modelo de soledad elegida y fecunda, en contraste con Rincón.</p></div>
+        <div class="rec"><div class="head"><h4>Rutina "Antes pensaba… ahora pienso"</h4><span class="kind">Rutina de pensamiento</span></div><p><b>Modelo:</b> antes pensaba que estar solo era señal de que algo andaba mal; ahora pienso que la soledad elegida es necesaria para conocerme, y que lo que empobrece es el aislamiento.</p></div>
+      </div>
+    </div>
+
+    <div class="stack">
+      <h3>Tabla comparativa Rilke / Rincón</h3>
+      <div class="tbl"><table>
+        <thead><tr><th></th><th>Rilke</th><th>Rincón (Milo J)</th></tr></thead>
+        <tbody>
+          <tr><td>Cómo llega la soledad</td><td>Elegida</td><td>Llega tras una pérdida</td></tr>
+          <tr><td>Qué busca</td><td>Conocerse, madurar</td><td>Refugiarse, no sufrir más</td></tr>
+          <tr><td>Emoción dominante</td><td>Calma exigente, esperanza</td><td>Tristeza, vacío</td></tr>
+          <tr><td>Tipo de soledad</td><td>Fecunda</td><td>Más cercana al aislamiento</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="stack read">
+      <h3>Errores típicos</h3>
+      <ul class="clean">
+        <li>Decir que la soledad es mala (o buena) sin distinguir los dos tipos.</li>
+        <li>Confundir ser introvertido con estar aislado.</li>
+        <li>Creer que soledad fecunda significa estar siempre bien.</li>
+        <li>Olvidar el "para qué": la soledad fecunda prepara el don.</li>
+      </ul>
+      <p class="quote">"No me aíslo para escapar de los otros; me recojo para tener algo verdadero que darles."</p>
+    </div>
+  </article>
+
+  <!-- TEMA 4 -->
+  <article class="view" data-t="4" data-tema-panel="4" hidden>
+    <div class="stack">
+      <div class="eyebrow"><span class="chip">Semana 10</span><span>Fragilidad humana · Sentido del sufrimiento · Transformación por el dolor</span></div>
+      <h2>Dolor humano: ¿cómo enfrentar el sufrimiento?</h2>
+      <p class="muted read">Pregunta guía: cuando algo duele mucho, ¿qué es lo primero que quieres hacer? La diferencia no está en cuánto duele, sino en lo que uno hace con el dolor.</p>
+    </div>
+    <div class="idea read">
+      <span class="note">Idea central</span>
+      <p>El dolor no tiene una explicación completa (es un misterio), pero <span class="hl">está unido al amor</span>: sufrimos porque algo nos importa. No todo dolor es igual: el de la fragilidad no tiene culpable; el causado por otro sí. Y lo decisivo es qué hacemos con él: <b>negarlo</b>, <b>instalarnos</b> en él o <b>integrarlo</b>. Solo integrar abre una posibilidad de crecimiento.</p>
+    </div>
+    <div class="layers read">
+      <div class="layer"><span class="lbl">En simple</span><p>No elegimos todo lo que nos duele, pero sí qué lugar le damos en nuestra historia.</p></div>
+      <div class="layer"><span class="lbl">Para la prueba</span><p>Integrar es reconocer el sufrimiento con honestidad, sin minimizarlo ni absolutizarlo, e incorporarlo a la propia historia como una experiencia que puede orientar el crecimiento personal.</p></div>
+    </div>
+
+    <div class="stack read">
+      <h3>Conceptos clave</h3>
+      <dl class="cx">
+        <div><dt>¿Por qué existe el dolor?</dt><dd><p>Desde la filosofía no hay explicación completa: el dolor está asociado al misterio. La tradición bíblica (Génesis 3) lo presenta como parte de la condición humana: dar a luz con dolor, trabajar la tierra con esfuerzo. Lo que sí podemos decir: <b>si no amáramos, no sufriríamos</b>.</p></dd></div>
+        <div><dt>La fragilidad como condición humana</dt><dd><p>Sufrimos porque somos vulnerables. Amamos, y por eso podemos perder. Esperamos, y por eso podemos frustrarnos.</p><div class="why"><span class="note">¿por qué?</span><p>El sufrimiento está vinculado a lo que hace significativa la vida: revela que algo nos importa.</p></div></dd></div>
+      </dl>
+    </div>
+
+    <div class="stack">
+      <h3>Dos tipos de dolor</h3>
+      <div class="tbl"><table>
+        <thead><tr><th></th><th>Dolor de fragilidad</th><th>Dolor por el mal del otro</th></tr></thead>
+        <tbody>
+          <tr><td>Origen</td><td>La condición humana: enfermedad, muerte, límites</td><td>Una acción injusta de otra persona: abandono, abuso, traición</td></tr>
+          <tr><td>¿Hay culpable?</td><td>No</td><td>Sí: hay un responsable (dimensión moral)</td></tr>
+          <tr><td>La víctima</td><td>Sufre sin culpa</td><td>No es culpable</td></tr>
+          <tr><td>Qué pide</td><td>Aceptar el límite, acompañar, buscar sentido</td><td>Reconocer la injusticia, protegerse, justicia; con el tiempo, quizá perdón</td></tr>
+          <tr><td>Recurso</td><td>Tierra de penumbras</td><td>Esteban Paredes</td></tr>
+        </tbody>
+      </table></div>
+      <div class="why read"><span class="note">¿por qué distinguir?</span><p>Confundirlos tiene consecuencias graves. Si trato un abuso como "cosas de la vida", normalizo el mal y libero al responsable. Si busco culpables en una enfermedad, quedo atrapado en la rabia o me culpo a mí. Y si culpo a la víctima, la daño dos veces.</p></div>
+    </div>
+
+    <div class="stack">
+      <h3>Las tres formas de relacionarse con el dolor</h3>
+      <div class="three">
+        <div class="cell n"><h4>1 · Negar</h4><p>Actuar como si el dolor no existiera o no importara.</p><p class="tag"><b>Frases:</b> "estoy bien", "no quiero hablar de eso", "hay que seguir no más".</p><p class="tag"><b>Conductas:</b> distraerse sin parar, trabajar en exceso, carretear, evadir con pantallas o alcohol.</p><p class="tag"><b>Ventaja aparente:</b> protege a corto plazo. <b>Costo:</b> impide aprender; el dolor vuelve, muchas veces más fuerte.</p></div>
+        <div class="cell i"><h4>2 · Instalarse</h4><p>Reconocer el dolor, pero quedarse a vivir en él: se vuelve el centro de la vida.</p><p class="tag"><b>Frases:</b> "a mí siempre me pasa", "nunca lo voy a superar", "nadie me entiende".</p><p class="tag"><b>Conductas:</b> rumiar, guardar rencor, interpretar todo desde la herida.</p><p class="tag"><b>Ventaja aparente:</b> es honesto con que duele. <b>Costo:</b> crea una identidad de víctima permanente y quita libertad y futuro.</p></div>
+        <div class="cell g"><h4>3 · Integrar</h4><p>Reconocer el sufrimiento con honestidad, sin minimizarlo ni absolutizarlo, e incorporarlo a la propia historia como experiencia que orienta el crecimiento.</p><p class="tag"><b>Frase:</b> "esto me dolió y me marcó; no me define, y puedo aprender de ello".</p><p class="tag"><b>Conductas:</b> hablarlo, pedir ayuda, darle tiempo, buscarle sentido, transformarlo en empatía.</p><p class="tag"><b>Resultado:</b> crecimiento personal. El dolor se vuelve parte de mi historia, no mi jaula.</p></div>
+      </div>
+      <div class="why read"><span class="note">¿por qué integrar?</span><p>Es la única actitud que sostiene dos verdades juntas: el dolor es real (no lo niego) y no es todo lo que soy (no me instalo). Negar falla por defecto, porque minimiza; instalarse falla por exceso, porque absolutiza. Viktor Frankl (<i>El hombre en busca de sentido</i>) lo resume: no siempre elegimos lo que nos pasa, pero sí la actitud con que lo enfrentamos.</p></div>
+      <p class="read"><b>Ojo:</b> integrar no es olvidar, ni "pensar positivo", ni estar siempre bien. Decir "no es para tanto" es minimizar, y minimizar es una forma de negar.</p>
+    </div>
+
+    <div class="stack">
+      <h3>Recursos de clase y cómo usarlos</h3>
+      <div class="recs">
+        <div class="rec"><div class="head"><h4>Niño · Milo J</h4><span class="kind">Canción</span></div><p>Un adulto le habla al niño que fue. Recuerda una infancia con paisajes y cariño, pero también con heridas: la pena de su madre, el miedo al abandono, la tensión cuando le hablan del padre y la dureza de crecer con carencias. Al final aparece la esperanza: ve luz en medio de los males.</p><p class="use"><b>¿Dolor de la vida o de otra persona?</b> Ambos: hay fragilidad (pobreza, infancia perdida) y heridas causadas por otros (abandono, conflictos familiares). El gesto de la canción, mirar al niño herido con ternura, es un movimiento hacia la integración.</p></div>
+        <div class="rec"><div class="head"><h4>Riley · Intensamente</h4><span class="kind">Película</span></div><p>Alegría intenta mantener a Tristeza lejos. Riley se va apagando, se desconecta de lo que la definía y llega a intentar escaparse. Cuando por fin deja aparecer la tristeza, llora con sus padres, les dice que extraña su vida anterior y recibe consuelo.</p><p class="use"><b>Úsalo como:</b> evitar siempre la tristeza es negar, y produce desconexión. Una emoción dolorosa cumple funciones: señala una pérdida, nos mueve a pedir ayuda, despierta la empatía de otros y permite procesar.</p></div>
+        <div class="rec"><div class="head"><h4>Esteban Paredes · entrevista</h4><span class="kind">Video</span></div><p>Ha contado que a los 5 años sus padres se separaron, su madre se fue y no la volvió a ver en años, y que vivió de cerca la profunda pena de su padre. Reconoce que eso lo endureció. Con el tiempo se reencontró con su madre, dice no guardarle rencor y, ya como padre, mira su historia de otra forma.</p><p class="use"><b>Úsalo como:</b> dolor causado principalmente por otros (abandono), con dimensión moral; él, siendo niño, no tuvo culpa. Muestra un camino hacia la integración: no lo niega (lo cuenta) ni se instala (no vive del rencor), aunque la herida dejó huella. Contrasta con los detalles que viste en clase.</p></div>
+        <div class="rec"><div class="head"><h4>Tierra de penumbras</h4><span class="kind">Película</span></div><p>Basada en la vida de C. S. Lewis y su libro sobre la muerte de su esposa Joy. La escena muestra al hijo de Joy frente a la enfermedad de su madre: dolor sin culpable y sin respuesta fácil.</p><p class="use"><b>Úsalo como:</b> dolor de fragilidad. Ilustra que el dolor está unido al amor: sufren tanto porque amaban. Una idea de Lewis que conecta: el dolor de ahora es parte de la felicidad de antes.</p></div>
+        <div class="rec"><div class="head"><h4>La casa de las miradas · Daniele Mencarelli</h4><span class="kind">Testimonio</span></div><p>Joven poeta en crisis que huía de su dolor con el alcohol. Consigue trabajo en el aseo de un hospital pediátrico en Roma, y el sufrimiento de los niños lo obliga a hacerse las preguntas que evitaba. Mira el dolor de frente y eso lo lleva a renacer.</p><p class="use"><b>Úsalo como:</b> el paso de negar a integrar. Es el ejemplo más claro de la clase.</p></div>
+      </div>
+    </div>
+
+    <div class="stack read">
+      <h3>Errores típicos</h3>
+      <ul class="clean">
+        <li>Decir que las tres formas son "negar, aceptar y superar".</li>
+        <li>Igualar integrar con superar u olvidar.</li>
+        <li>Poner todos los dolores en el mismo saco.</li>
+        <li>Juzgar a quien niega: es humano y protege a corto plazo; el problema es quedarse ahí.</li>
+      </ul>
+      <p class="quote">"No elegimos todo lo que nos duele, pero sí qué lugar le damos en nuestra historia."</p>
+    </div>
+  </article>
+
+  <!-- TEMA 5 -->
+  <article class="view" data-t="5" data-tema-panel="5" hidden>
+    <div class="stack">
+      <div class="eyebrow"><span class="chip">Semana 11 · IL 2.4</span><span>Consumismo como lógica existencial · Uso responsable de los bienes · Sentido más allá de lo material</span></div>
+      <h2>¿Tengo cosas o las cosas me tienen?</h2>
+      <p class="muted read">Pregunta guía: compraste algo que querías hace tiempo y al día siguiente ya no te parecía tan especial. ¿Qué hay detrás de eso?</p>
+    </div>
+    <div class="idea read">
+      <span class="note">Idea central</span>
+      <p>Las cosas son buenas y necesarias para vivir. El problema empieza cuando les pedimos lo que no pueden dar: identidad, estatus, reconocimiento o sentido. Las cosas no pueden responder la pregunta "¿para qué vivo?"; esa se responde <span class="hl">desde lo que uno es, no desde lo que uno tiene</span>. El desafío no es eliminar las cosas, sino ordenarlas.</p>
+    </div>
+    <div class="layers read">
+      <div class="layer"><span class="lbl">En simple</span><p>Las cosas sirven para vivir; no sirven para decirme quién soy.</p></div>
+      <div class="layer"><span class="lbl">Para la prueba</span><p>El consumismo no es solo comprar mucho: es una lógica existencial en que el valor de la persona se mide por lo que tiene, muestra y acumula. Por eso se puede tener mucho y sentirse vacío.</p></div>
+    </div>
+
+    <div class="stack read">
+      <h3>Conceptos clave</h3>
+      <dl class="cx">
+        <div><dt>Las cosas en su lugar correcto</dt><dd><p>El problema aparece cuando a un objeto se le atribuye un significado que excede su función: se vuelve fuente de identidad ("soy alguien porque tengo esto"), símbolo de estatus o sustituto de reconocimiento, y ocupa el lugar que solo le corresponde a la persona.</p></dd></div>
+        <div><dt>Consumismo como lógica existencial</dt><dd><p>Una forma de entender la vida en que el valor de la persona se mide por lo que tiene, muestra y acumula. Quien vive así pierde la referencia de lo que es en sí mismo.</p><div class="why"><span class="note">¿por qué "existencial"?</span><p>Porque afecta cómo me entiendo y cómo valoro a otros, no solo cómo gasto. Alguien con poco dinero también puede vivir en esta lógica.</p></div></dd></div>
+        <div><dt>Necesidad real vs. sustituto de sentido</dt><dd><p>Necesidad real: lo que la vida pide (abrigo, una herramienta de trabajo). Sustituto de sentido: compro para llenar otra cosa (soledad, inseguridad, aburrimiento, necesidad de aprobación).</p></dd></div>
+        <div><dt>Libertad respecto de las cosas</dt><dd><p>Puedo usarlas, compartirlas y prescindir de ellas sin dejar de sentirme yo. Que estén al servicio de la vida, no que la vida gire en torno a ellas.</p></dd></div>
+        <div><dt>Dimensión social</dt><dd><p>El uso de lo que tengo afecta a quienes tienen menos: desperdicio, ostentación, endeudamiento, o al revés, compartir.</p></dd></div>
+        <div><dt>Para sumar puntos</dt><dd><p><b>Adaptación hedónica:</b> nos acostumbramos rápido a lo nuevo; por eso lo que tanto queríamos "al día siguiente" ya no es especial y aparece el deseo de la próxima compra. <b>Erich Fromm</b> (<i>¿Tener o ser?</i>, 1976) distingue vivir desde el tener y vivir desde el ser.</p></dd></div>
+      </dl>
+    </div>
+
+    <div class="stack">
+      <h3>Consumo vs. consumismo</h3>
+      <div class="tbl"><table>
+        <thead><tr><th></th><th>Consumo</th><th>Consumismo</th></tr></thead>
+        <tbody>
+          <tr><td>Qué es</td><td>Usar bienes para vivir</td><td>Vivir para tener y mostrar</td></tr>
+          <tr><td>Motivo</td><td>Necesidad real</td><td>Sustituto de sentido: identidad, estatus, aprobación, calmar ansiedad</td></tr>
+          <tr><td>Después de comprar</td><td>Satisfacción proporcional</td><td>Euforia breve, luego vacío o culpa</td></tr>
+          <tr><td>Relación con la cosa</td><td>La uso</td><td>Dependo de ella para sentirme alguien</td></tr>
+          <tr><td>Libertad</td><td>Yo tengo las cosas</td><td>Las cosas me tienen</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="stack">
+      <h3>Señales y preguntas filtro</h3>
+      <div class="vs">
+        <div class="cell bad"><h4>Señales de que las cosas me tienen</h4><ul class="clean"><li>Compro para calmar la ansiedad o la pena.</li><li>Me siento menos si no tengo lo que otros muestran.</li><li>Me endeudo por apariencia.</li><li>La emoción dura poco y necesito otra compra.</li><li>Me cuesta prestar o compartir.</li></ul></div>
+        <div class="cell good"><h4>Preguntas antes de comprar</h4><ul class="clean"><li>¿Lo necesito o lo quiero?</li><li>¿Qué estoy buscando realmente?</li><li>¿Lo seguiré usando en tres meses?</li><li>¿El costo es proporcional al bienestar que me dará?</li><li>¿Lo compraría si nadie lo fuera a ver?</li></ul></div>
+      </div>
+    </div>
+
+    <div class="stack">
+      <h3>Recursos de clase y cómo usarlos</h3>
+      <div class="recs">
+        <div class="rec"><div class="head"><h4>Rebeca · Confesiones de una compradora compulsiva</h4><span class="kind">Película</span></div><p><b>Antes de comprar:</b> ansiedad, deseo intenso y la sensación de que el objeto la hará ser otra, más segura y admirada; la vitrina parece hablarle. <b>Al comprar:</b> euforia y alivio. <b>Después:</b> el efecto dura poco y vuelven la culpa, el vacío, las deudas y la necesidad de esconderlo, lo que la empuja a comprar otra vez.</p><p class="use"><b>Úsalo como:</b> el ciclo del consumismo. El objeto promete un sentido que no puede dar.</p></div>
+        <div class="rec"><div class="head"><h4>La felicidad de las ratas (Happiness, Steve Cutts)</h4><span class="kind">Animación</span></div><p>Una ciudad de ratas que corren tras la felicidad prometida por las ofertas, los autos, el trabajo y las pastillas, y terminan atrapadas en una carrera sin fin.</p><p class="use"><b>Úsalo como:</b> la felicidad que promete el consumo nunca llega; la carrera no se detiene.</p></div>
+        <div class="rec"><div class="head"><h4>El dilema de las redes sociales</h4><span class="kind">Documental (tráiler)</span></div><p>Ex trabajadores de empresas tecnológicas explican que las plataformas se diseñan para capturar nuestra atención: el usuario termina siendo el producto.</p><p class="use"><b>Úsalo como:</b> también consumimos contenido, y la exposición constante a lo que otros tienen alimenta el deseo de comprar. Hay un sistema que empuja, por eso hace falta interioridad para elegir con libertad.</p></div>
+        <div class="rec"><div class="head"><h4>Experimento social y rutina "Qué dice · Qué significa · ¿Y yo?"</h4><span class="kind">Video · Rutina</span></div><p>Lo que dice el recurso, lo que significa con los conceptos de la clase y qué tiene que ver conmigo (revisar tus propias redes y compras).</p><p class="use"><b>Úsalo como:</b> el "¿y yo?" es donde está el puntaje: aplica la distinción necesidad real / sustituto de sentido a ti.</p></div>
+      </div>
+    </div>
+
+    <div class="stack read">
+      <h3>Errores típicos</h3>
+      <ul class="clean">
+        <li>Decir que comprar es malo o que hay que vivir sin cosas.</li>
+        <li>Confundir consumismo con tener mucho dinero.</li>
+        <li>Olvidar la dimensión social del uso de los bienes.</li>
+      </ul>
+      <p class="quote">"Las cosas sirven para vivir; no sirven para decirme quién soy."</p>
+    </div>
+  </article>
+</section>
+
+<!-- ===================== MAPAS ===================== -->
+<section class="view" id="v-mapas" role="tabpanel" aria-labelledby="tab-mapas" hidden>
+  <div class="stack read">
+    <h2>Mapas conceptuales</h2>
+    <p class="muted">Léelos de arriba abajo; las palabras escritas "a mano" son los conectores. Truco para memorizar: tapa los recuadros y di en voz alta qué va después de cada conector.</p>
+  </div>
+  <div class="subs" id="mapSubs">
+    <button class="sub" data-t="0" data-map="0" aria-pressed="true">General</button>
+    <button class="sub" data-t="1" data-map="1" aria-pressed="false">Amor</button>
+    <button class="sub" data-t="2" data-map="2" aria-pressed="false">Relaciones</button>
+    <button class="sub" data-t="3" data-map="3" aria-pressed="false">Soledad</button>
+    <button class="sub" data-t="4" data-map="4" aria-pressed="false">Dolor</button>
+    <button class="sub" data-t="5" data-map="5" aria-pressed="false">Consumo</button>
+  </div>
+
+  <div data-map-panel="0" class="stack">
+    <div class="chain">
+      <div class="c-node solid"><b>LA PERSONA</b><small>Digna por sí misma, relacional, libre, con interioridad. Se realiza dándose.</small></div>
+      <div class="c-arrow"><i></i><span>se realiza en</span></div>
+      <div class="c-node" data-t="1"><b>El amor · S7</b><small>Decisión que integra razón, emoción y voluntad y busca el bien del otro.</small></div>
+      <div class="c-arrow"><i></i><span>que se vive en</span></div>
+      <div class="c-node" data-t="2"><b>Vínculos auténticos · S8</b><small>Lógica del reconocimiento: el otro vale por quien es.</small></div>
+      <div class="c-arrow"><i></i><span>que exigen</span></div>
+      <div class="c-node" data-t="3"><b>Autoconocimiento · S9</b><small>Soledad fecunda: no puedo dar lo que no conozco de mí.</small></div>
+      <div class="c-arrow"><i></i><span>se pone a prueba en</span></div>
+      <div class="c-node" data-t="4"><b>El dolor · S10</b><small>Unido al amor. Integrarlo, sin negarlo ni instalarse.</small></div>
+      <div class="c-arrow"><i></i><span>se ve amenazada por</span></div>
+      <div class="c-node" data-t="5"><b>El consumismo · S11</b><small>Medir el valor por lo que se tiene. Respuesta: las cosas en su lugar.</small></div>
+      <div class="c-arrow"><i></i><span>todo apunta a</span></div>
+      <div class="c-node solid"><b>SENTIDO</b><small>La persona vale por lo que es, no por lo que siente, produce, aparenta o tiene.</small></div>
+    </div>
+  </div>
+
+  <div data-map-panel="1" class="map" data-t="1" hidden>
+    <div class="m-root">AMOR<small>Acción libre ante el bien de otra persona</small></div>
+    <div class="m-trunk">
+      <div class="m-br"><span class="m-link">no se reduce a</span><div class="m-pair"><div class="m-node neg"><b>Emoción</b><small>Breve, espontánea, corporal</small></div><div class="m-node neg"><b>Sentimiento</b><small>Más estable, pero cambia</small></div></div></div>
+      <div class="m-br"><span class="m-link">integra</span><div class="m-pair"><div class="m-node"><b>Razón</b><small>Nadie ama lo que no conoce</small></div><div class="m-node"><b>Emoción</b><small>Me afecta, lo siento</small></div><div class="m-node"><b>Voluntad</b><small>Decido buscar su bien</small></div></div></div>
+      <div class="m-br"><span class="m-link">se reconoce por</span><div class="m-node"><b>5 características</b><small>Identificación · Donación · Reciprocidad · Compromiso · Sacrificio</small></div></div>
+      <div class="m-br"><span class="m-link">madura cuando</span><div class="m-node"><b>Busca el bien del otro por sí mismo</b><small>Ni "qué siento" ni "qué me aportas"</small></div></div>
+      <div class="m-br"><span class="m-link">se deforma en</span><div class="m-pair"><div class="m-node neg"><b>Amor líquido</b><small>Se acaba cuando baja la emoción</small></div><div class="m-node neg"><b>Amor tóxico</b><small>Control y posesión</small></div></div></div>
+    </div>
+  </div>
+
+  <div data-map-panel="2" class="map" data-t="2" hidden>
+    <div class="m-root">RELACIONES<small>Nadie se hace solo</small></div>
+    <div class="m-trunk">
+      <div class="m-br"><span class="m-link">parten de</span><div class="m-node"><b>Relacionalidad constitutiva</b><small>Dependemos de otros desde que nacemos; la identidad se forma en relación</small></div></div>
+      <div class="m-br"><span class="m-link">pueden basarse en</span><div class="m-pair"><div class="m-node neg"><b>Utilidad</b><small>Lo que me sirve</small></div><div class="m-node neg"><b>Deleite</b><small>Lo que me agrada</small></div><div class="m-node"><b>Amistad</b><small>Su bien por sí mismo</small></div></div></div>
+      <div class="m-br"><span class="m-link">se rigen por</span><div class="m-pair"><div class="m-node neg"><b>Lógica del uso</b><small>El otro como medio; no necesita mala intención</small></div><div class="m-node"><b>Lógica del reconocimiento</b><small>El otro como fin: "te valoro por quien eres"</small></div></div></div>
+      <div class="m-br"><span class="m-link">construyen</span><div class="m-pair"><div class="m-node neg"><b>Conexiones</b><small>Funcionales, muchas, intercambiables</small></div><div class="m-node"><b>Vínculos auténticos</b><small>Elegidos, con compromiso: estar para otros</small></div></div></div>
+      <div class="m-br"><span class="m-link">se fundan en</span><div class="m-node"><b>Dignidad</b><small>La persona vale por quien es, no por lo que produce</small></div></div>
+    </div>
+  </div>
+
+  <div data-map-panel="3" class="map" data-t="3" hidden>
+    <div class="m-root">SOLEDAD<small>Estar solo ≠ estar aislado</small></div>
+    <div class="m-trunk">
+      <div class="m-br"><span class="m-link">amenazada por</span><div class="m-node neg"><b>Existencia reactiva</b><small>Sobreestimulación que desplaza la interioridad</small></div></div>
+      <div class="m-br"><span class="m-link">puede ser</span><div class="m-pair"><div class="m-node neg"><b>De aislamiento</b><small>Encierro involuntario por miedo o heridas → vacío</small></div><div class="m-node"><b>Fecunda</b><small>Búsqueda activa de interioridad → da fruto</small></div></div></div>
+      <div class="m-br"><span class="m-link">la fecunda produce</span><div class="m-node"><b>Autoconocimiento activo</b><small>Preguntas auténticas · emociones procesadas · valores integrados</small></div></div>
+      <div class="m-br"><span class="m-link">se cultiva con</span><div class="m-node"><b>Hábitos</b><small>Silencio, bitácora, caminar sin pantalla, leer, contemplar</small></div></div>
+      <div class="m-br"><span class="m-link">sirve para</span><div class="m-node"><b>El don de sí</b><small>No puedo dar lo que no conozco de mí</small></div></div>
+    </div>
+  </div>
+
+  <div data-map-panel="4" class="map" data-t="4" hidden>
+    <div class="m-root">DOLOR<small>Misterio unido al amor</small></div>
+    <div class="m-trunk">
+      <div class="m-br"><span class="m-link">nace de</span><div class="m-node"><b>Fragilidad</b><small>Amamos y podemos perder; esperamos y podemos frustrarnos</small></div></div>
+      <div class="m-br"><span class="m-link">hay dos tipos</span><div class="m-pair"><div class="m-node"><b>De fragilidad</b><small>Condición humana; sin culpable</small></div><div class="m-node"><b>Por el mal del otro</b><small>Dimensión moral; la víctima no es culpable</small></div></div></div>
+      <div class="m-br"><span class="m-link">tres respuestas</span><div class="m-pair"><div class="m-node neg"><b>Negar</b><small>Protege a corto plazo, impide aprender</small></div><div class="m-node neg"><b>Instalarse</b><small>Identidad de víctima permanente</small></div><div class="m-node"><b>Integrar</b><small>Honestidad sin minimizar ni absolutizar</small></div></div></div>
+      <div class="m-br"><span class="m-link">integrar lleva a</span><div class="m-node"><b>Crecimiento y sentido</b><small>El dolor forma parte de mi historia sin definirme</small></div></div>
+    </div>
+  </div>
+
+  <div data-map-panel="5" class="map" data-t="5" hidden>
+    <div class="m-root">LAS COSAS<small>Buenas y necesarias para vivir</small></div>
+    <div class="m-trunk">
+      <div class="m-br"><span class="m-link">se desordenan cuando son</span><div class="m-pair"><div class="m-node neg"><b>Identidad</b><small>"Soy alguien si lo tengo"</small></div><div class="m-node neg"><b>Estatus</b><small>Para mostrar</small></div><div class="m-node neg"><b>Reconocimiento</b><small>Para que me vean</small></div></div></div>
+      <div class="m-br"><span class="m-link">eso es</span><div class="m-node neg"><b>Consumismo como lógica existencial</b><small>Valgo por lo que tengo, muestro y acumulo → vacío</small></div></div>
+      <div class="m-br"><span class="m-link">se distingue</span><div class="m-pair"><div class="m-node"><b>Necesidad real</b><small>Lo que la vida pide</small></div><div class="m-node neg"><b>Sustituto de sentido</b><small>Llenar otra carencia</small></div></div></div>
+      <div class="m-br"><span class="m-link">se ordenan con</span><div class="m-node"><b>Libertad</b><small>Usar, compartir, no depender</small></div></div>
+      <div class="m-br"><span class="m-link">y tienen</span><div class="m-node"><b>Dimensión social</b><small>Lo que hago con lo mío afecta a quienes tienen menos</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PREGUNTAS ===================== -->
+<section class="view" id="v-preguntas" role="tabpanel" aria-labelledby="tab-preguntas" hidden>
+  <div class="stack read">
+    <h2>Las preguntas del curso</h2>
+    <p class="muted">Todas las preguntas de los PPT, las descripciones de clase y la bitácora. Responde primero en tu cabeza (o en voz alta) y después abre la respuesta: así te cuestionas de verdad.</p>
+  </div>
+  <div class="filters" id="qFilters"></div>
+  <div class="row"><button class="btn small" id="qOpenAll" type="button">Abrir todas</button><button class="btn small" id="qCloseAll" type="button">Cerrar todas</button><span class="muted" id="qCount"></span></div>
+  <div class="qlist" id="qList"></div>
+</section>
+
+<!-- ===================== PRUEBA ===================== -->
+<section class="view" id="v-prueba" role="tabpanel" aria-labelledby="tab-prueba" hidden>
+  <div class="stack read">
+    <h2>Ponte a prueba</h2>
+    <p class="muted">Alternativas con explicación del por qué, y preguntas de desarrollo con pauta para autocorregirte. La nota se calcula con la escala chilena al 60% de exigencia.</p>
+  </div>
+  <div class="subs" id="pruebaSubs">
+    <button class="sub" data-mode="alt" aria-pressed="true">Alternativas</button>
+    <button class="sub" data-mode="dev" aria-pressed="false">Desarrollo</button>
+  </div>
+
+  <div id="altPanel" class="stack">
+    <div class="filters" id="zFilters"></div>
+    <div class="score" aria-live="polite">
+      <div class="k"><span class="lab">Correctas</span><span class="big" id="zRight">0 / 0</span></div>
+      <div class="k"><span class="lab">Nota estimada</span><span class="big" id="zNota">–</span></div>
+      <div class="bar" aria-hidden="true"><i id="zBar"></i></div>
+      <div class="row"><button class="btn small" id="zShuffle" type="button">Mezclar</button><button class="btn small primary" id="zReset" type="button">Reiniciar</button></div>
+    </div>
+    <div class="qz" id="zList"></div>
+  </div>
+
+  <div id="devPanel" class="stack" hidden>
+    <p class="read">Escribe tu respuesta como si fuera la prueba. Después abre la pauta, marca lo que sí incluiste y compara con la respuesta modelo. Lo que escribas queda guardado solo en este navegador.</p>
+    <div class="stack" id="dList"></div>
+  </div>
+</section>
+
+<!-- ===================== GLOSARIO ===================== -->
+<section class="view" id="v-glosario" role="tabpanel" aria-labelledby="tab-glosario" hidden>
+  <div class="stack read">
+    <h2>Glosario</h2>
+    <p class="muted">En modo tarjetas la definición está oculta: di la definición antes de tocar la tarjeta.</p>
+  </div>
+  <div class="row">
+    <input class="gsearch" id="gSearch" type="search" placeholder="Buscar un concepto" aria-label="Buscar un concepto">
+  </div>
+  <div class="row"><button class="btn small primary" id="gMode" type="button" aria-pressed="true">Modo tarjetas: activado</button><span class="muted" id="gCount"></span></div>
+  <div class="ggrid" id="gGrid"></div>
+</section>
+
+</div>
+</main>
+
+<script>
+(function(){
+var TEMAS={0:"Integración",1:"S7 Amor",2:"S8 Relaciones",3:"S9 Soledad",4:"S10 Dolor",5:"S11 Consumo"};
+
+/* ---------- PREGUNTAS DEL CURSO ---------- */
+var Q=[
+{t:1,k:"Concepto",q:"¿Qué es el amor desde el punto de vista antropológico?",
+a:"Es una acción libre que surge ante la presencia de algo bueno, otra persona, y que busca su bien. Integra tres dimensiones: la <b>razón</b> (conozco al otro: nadie ama lo que no conoce), la <b>emoción</b> (lo siento, me afecta) y la <b>voluntad</b> (decido buscar su bien). Implica emociones, pero no se reduce a ellas: es estable y permanente. Compromete a toda la persona, cuerpo y espíritu.",
+p:"Si el amor fuera solo emoción, dependería de lo que me pasa y se acabaría cuando la emoción baje. Al ser también decisión, es libre: por eso se puede prometer y sostener en el tiempo.",
+s:"Contrástalo con el amor líquido (Bauman) y usa un ejemplo: Sam carga a Frodo cuando ya no tiene fuerzas."},
+{t:1,k:"Concepto",q:"¿Qué características tiene el verdadero amor?",
+a:"Cinco. <b>Identificación</b>: reconozco al otro como igual a mí, de la misma naturaleza y dignidad. <b>Donación</b>: salgo de mi egocentrismo y busco su bien. <b>Reciprocidad</b>: hay correspondencia y correlación entre ambos. <b>Compromiso</b>: lealtad y fidelidad, una promesa tácita de estar en las buenas y en las malas. <b>Sacrificio</b>: disposición a renunciar a algo propio por el otro, incluso a actos heroicos como dar la vida.",
+p:"Cada una corrige una deformación: sin identificación hay dominio; sin donación, egoísmo; sin reciprocidad, una relación desigual; sin compromiso, entusiasmo pasajero; sin sacrificio, amor solo mientras no cueste.",
+s:"Da un ejemplo breve de cada una y aclara que sacrificio no es aguantar maltrato."},
+{t:1,k:"Concepto",q:"¿El amor es un sentimiento o una emoción?",
+a:"Ninguna de las dos por sí sola. La <b>emoción</b> es una reacción espontánea, breve y muy corporal. El <b>sentimiento</b> es más estable y consciente. El amor implica ambos, pero es más: es un acto de la voluntad que decide buscar el bien del otro. El curso lo resume diciendo que el amor no es variable, sino estable y permanente.",
+p:"Si se reduce a emoción, dura lo que dura la emoción; si se reduce a sentimiento, depende del estado de ánimo. Lo que le da estabilidad es la decisión."},
+{t:1,k:"Concepto",q:"¿El amor termina automáticamente cuando cambia el sentimiento? ¿Y en la amistad o la familia?",
+a:"No. Los sentimientos cambian por cansancio, rutina, estrés o crisis. Si el amor fuera solo sentimiento, cada cambio sería un final. Como integra razón y voluntad, la frase \"ya no siento lo mismo\" puede ser el momento en que el amor deja de depender de lo que me pasa y se vuelve elegido. Vale para la pareja, la amistad y la familia: un padre no deja de amar a su hijo el día que este lo saca de quicio.",
+p:"El sentimiento es el motor de arranque, pero la voluntad es el combustible del viaje. Amar no es solo algo que te ocurre: es algo que construyes.",
+s:"Agrega el límite: decidir amar no es tolerar violencia. Una relación tóxica no se sostiene \"por decisión\", porque ahí no se busca el bien de nadie."},
+{t:1,k:"Concepto",q:"¿Qué no es amor? (amor tóxico)",
+a:"No es amor una relación con control (revisar el celular, decidir con quién se junta el otro), celos posesivos, aislamiento de amigos y familia, humillación, chantaje o dependencia (\"sin ti no soy nada\"). Puede haber emociones muy intensas, pero no hay amor.",
+p:"Falla la identificación, porque el otro se trata como posesión y no como igual, y falla la donación, porque se busca la propia seguridad o placer y no el bien del otro. Intensidad emocional no es lo mismo que amor."},
+{t:1,k:"Recurso",q:"Un Ratito (Bad Bunny): ¿qué le dice el cantante a la otra persona sobre lo que pueden esperar, y cómo la trata?",
+a:"Le propone algo pasajero: disfrutar un momento, sin promesas ni futuro. La trata como algo que se disfruta por un rato, no como alguien valioso en sí mismo. Representa el amor por deleite y la emoción sin voluntad: faltan compromiso, reciprocidad estable y donación.",
+p:"El título ya lo dice: la relación vale mientras dure el gusto. Es la lógica del \"qué siento\" que el amor maduro supera.",
+s:"No necesitas la letra exacta: explica la idea (lo temporal, la falta de compromiso) y conéctala con un concepto."},
+{t:1,k:"Recurso",q:"Best Part of Me (Ed Sheeran): ¿cómo se describe a sí mismo, cómo describe el amor que recibe y en qué se diferencia de Un Ratito?",
+a:"Se describe como alguien imperfecto, con inseguridades y errores, y cuenta que lo aman igual, completo. El amor que recibe no depende de que sea perfecto ni de lo que aporta: lo acepta como persona. La diferencia con Un Ratito es que aquí el otro vale por sí mismo y hay compromiso; allá, vale por el momento.",
+p:"Muestra identificación y donación: el amor elige a la persona real, con defectos, no a una versión ideal que se disfruta."},
+{t:1,k:"Recurso",q:"Sam carga a Frodo: ¿qué siente Sam, qué tipo de amor muestra y cómo se vería un \"Sam\" en tu carrera?",
+a:"Sam está agotado, con miedo y sin fuerzas; seguramente no \"tiene ganas\" de cargar a Frodo. Lo hace por lealtad y por una decisión ya tomada: no dejar solo a su amigo. Hay emoción (cariño, angustia), pero pesa más la decisión. Es amor como donación, compromiso y sacrificio. Un \"Sam\" en tu carrera es el compañero de práctica que, cuando cometes un error grave o pasas por una crisis, te ayuda a corregirlo y te acompaña en vez de exponerte o alejarse.",
+p:"Si dependiera de la emoción del momento, Sam se habría rendido. La voluntad sostiene el amor cuando el sentimiento no alcanza."},
+{t:1,k:"Bitácora",q:"¿Cómo se manifestó la búsqueda del bien del otro por sobre el propio interés? Recuerda una vez que recibiste amor como donación y otra en que lo diste.",
+a:"Es personal, pero ordénala en tres pasos: describe la situación concreta, explica qué se dejó (tiempo, comodidad, dinero, orgullo) y nómbralo con el concepto. <b>Modelo:</b> \"Recibí: cuando estuve enfermo, una compañera me mandó la materia y me llamó para explicarme lo que no entendía, sin pedir nada. Di: acompañé a mi abuela a sus controles aunque perdí un día libre. En ambos casos hubo donación: se puso el bien del otro por sobre el interés propio.\"",
+p:"Se evalúa que conectes la experiencia con el concepto (donación), no solo que cuentes la historia."},
+{t:1,k:"Opinión argumentada",q:"¿Qué característica del amor crees que nos está faltando alrededor?",
+a:"<b>Modelo:</b> el compromiso. Vivimos relaciones que se mantienen mientras resultan cómodas y se cortan apenas cuestan: \"ya no siento lo mismo\", desaparecer sin explicación, amistades que se esfuman. Falta la promesa de estar en las buenas y en las malas, y se nota en parejas, amistades y equipos de trabajo.",
+p:"Cualquiera de las cinco sirve si la justificas con un ejemplo concreto y una causa (la cultura del sentimiento, el amor líquido)."},
+
+{t:2,k:"Concepto",q:"¿Qué tipos de amor existen?",
+a:"Tres, según Aristóteles. <b>Por utilidad</b>: el afecto se basa en el beneficio o uso que obtengo del otro; termina cuando deja de servir. <b>Por deleite</b>: quiero al otro en cuanto me causa placer o diversión; termina cuando deja de agradarme. <b>De amistad</b>: quiero el bien del otro como bien en sí mismo, no como medio para otra cosa; es estable.",
+p:"Los dos primeros no aman a la persona, sino lo que obtienen de ella. Solo la amistad ama a la persona misma, por eso es la única que respeta plenamente su dignidad.",
+s:"Aclara que utilidad y deleite no son malos; el problema es reducir la relación a ellos."},
+{t:2,k:"Concepto",q:"¿Cuáles son las lógicas de las relaciones y cuál respeta la dignidad?",
+a:"Dos. La <b>lógica del uso</b> trata al otro como herramienta y lo valora por lo que produce: cuando deja de ser útil, se descarta. La <b>lógica del reconocimiento</b> lo valora por quien es: \"te valoro por quien eres, no por lo que me produces\". Respeta la dignidad la del reconocimiento.",
+p:"La persona vale por sí misma, no por su utilidad. Kant lo dice así: tratarla siempre como fin y nunca solo como medio. El uso la reduce a cosa.",
+s:"Recuerda que el uso no necesita mala intención: basta con no detenerse a ver al otro como persona."},
+{t:2,k:"Concepto",q:"¿Qué es la relacionalidad constitutiva?",
+a:"La idea de que la relación con otros es parte de lo que somos, no un agregado. Nadie se hace solo: al nacer dependemos de otros para sobrevivir, y nuestra identidad se forma con las personas que nos rodearon. Aprendemos a hablar, confiar y querer porque alguien nos trató así.",
+p:"Por eso no buscamos a los otros \"por aburrimiento\": los necesitamos para ser plenamente humanos. Y por eso el modo en que me relaciono (uso o reconocimiento) dice quién soy."},
+{t:2,k:"Caso",q:"Camila tiene 34 compañeros en el WhatsApp; antes de cada prueba 12 le piden apuntes y en su cumpleaños nadie le escribió. ¿Alguien actuó con mala intención?",
+a:"Probablemente no: nadie quiso dañarla. Pero ese es justamente el punto. La lógica del uso no necesita maldad; basta con no detenerse a ver al otro como persona. Camila fue tratada como \"fuente de apuntes\" (amor por utilidad), no reconocida por quien es. Tenía 34 conexiones y ningún vínculo que se acordara de ella.",
+p:"Muestra que el uso es cotidiano y silencioso, y que reconocer al otro exige atención y decisión.",
+s:"Inclúyete (¿cuántas veces fui uno de los 12?) y propón qué sería reconocerla: saludarla, agradecerle, preguntarle cómo está sin pedirle nada."},
+{t:2,k:"Concepto",q:"¿Cuál es la diferencia entre conexión y vínculo?",
+a:"Una <b>conexión</b> es un contacto funcional y rápido para intercambiar información o resolver algo: muchas, superficiales e intercambiables. Un <b>vínculo</b> es una relación elegida, con presencia, compromiso y conocimiento mutuo: pocas y profundas, las personas con las que realmente cuento.",
+p:"Tener muchas conexiones no garantiza no estar solo. Lo que sostiene la vida son los vínculos, y estos se construyen con decisiones."},
+{t:2,k:"Recurso",q:"Al contrastar \"Un gran regalo\" (Nano Stern) y \"Eso que tú me das\" (Jarabe de Palo), ¿cuál es el gran regalo de un vínculo auténtico?",
+a:"El otro mismo y su presencia gratuita: que alguien esté conmigo y me quiera por quien soy, sin que tenga que ganármelo. Pau Donés publicó \"Eso que tú me das\" en 2020, poco antes de morir de cáncer, como agradecimiento a quienes lo acompañaron: recibió más de lo que pidió o creía merecer, y eso le hizo saber que no estaba solo.",
+p:"Un vínculo auténtico es regalo porque no se compra ni se exige: se recibe y se agradece. Es lo contrario de la lógica del uso, donde todo es intercambio."},
+{t:2,k:"Aplicación",q:"Redacten una conclusión: ¿cómo se aplica la lógica del reconocimiento en tu futura profesión (cliente estresado, paciente asustado, compañero que aprende más lento)?",
+a:"<b>Cliente estresado:</b> en vez de despacharlo rápido, lo escucho, nombro su preocupación, le explico con calma y resuelvo. <b>Paciente asustado:</b> no es \"la cama 4\": tiene nombre y miedo, y le explico qué le van a hacer. <b>Compañero más lento:</b> en vez de evitarlo porque me atrasa, le explico, le doy tiempo y valoro su avance. En administración: una jefatura que conoce a su equipo como personas, no solo por sus indicadores.",
+p:"La excelencia técnica carece de impacto real si no va unida a la capacidad de reconocer al otro como persona. Un trabajo bien hecho que trata mal a la persona sigue fallando en lo esencial."},
+{t:2,k:"Bitácora",q:"¿En qué momentos viví mis relaciones con la lógica del reconocimiento y en cuáles con la lógica del uso?",
+a:"<b>Modelo.</b> Uso: \"Le escribo a un compañero solo cuando necesito que me pase un trabajo; si no, no hablamos.\" Reconocimiento: \"Visito a mi abuela aunque no gano nada, porque me importa ella.\" Cierra con qué cambiarías: \"Voy a escribirle a ese compañero para saber cómo está, sin pedirle nada.\"",
+p:"Se busca honestidad y uso correcto de los conceptos. Reconocer que a veces usas a otros suma, no resta."},
+{t:2,k:"Recurso",q:"Escena de Cristina: ¿qué características del amor están ausentes, qué tipo de relación quiere construir y es lo mismo amor y amistad?",
+a:"Responde con método. <b>1)</b> Revisa la escena con las cinco características: ¿hay compromiso, reciprocidad, donación? Nombra las que faltan y el gesto donde se nota. <b>2)</b> Clasifica lo que busca con los tres tipos de amor: ¿utilidad, deleite o el bien del otro? <b>3)</b> ¿Amor y amistad son lo mismo? No exactamente: la amistad verdadera es una forma de amor (quiere el bien del otro por sí mismo), pero el amor es más amplio (familia, pareja, amistad), y el amor de pareja agrega exclusividad y un proyecto común.",
+p:"Estas preguntas se ganan aplicando los conceptos a lo que se ve en la escena, no resumiéndola. El material no describe la escena, así que completa con tus apuntes."},
+
+{t:3,k:"Concepto",q:"¿Qué tipos de soledad existen?",
+a:"Dos. La <b>soledad de aislamiento</b>: encierro involuntario que genera vacío existencial y desconexión del entorno, por miedo o heridas no resueltas; empobrece. La <b>soledad fecunda</b>: búsqueda activa de interioridad, espacio donde surgen las preguntas auténticas sobre la identidad, se procesan las emociones y se integran los valores que orientan la vida; construye.",
+p:"La diferencia no está en estar o no acompañado, sino en el sentido: la de aislamiento es huida y cierre; la fecunda es búsqueda y preparación para el encuentro."},
+{t:3,k:"Concepto",q:"¿Estar solo es lo mismo que estar aislado?",
+a:"No. Estar <b>solo</b> es una situación: no hay nadie al lado. Estar <b>aislado</b> es una ruptura: estar cortado de los vínculos. Se puede estar aislado en medio de mucha gente (Camila y sus 34 contactos) y estar solo sin estar aislado (Hirayama, que vive solo pero se relaciona con atención y cuidado).",
+p:"Confundirlos lleva a dos errores: temer toda soledad y llenarla de ruido, o creer que basta estar rodeado de gente para no estar solo."},
+{t:3,k:"Concepto",q:"¿Qué beneficios trae la soledad fecunda?",
+a:"Autoconocimiento (saber quién soy y qué quiero); procesar las emociones en vez de solo reaccionar; tomar decisiones más libres y pensadas; descansar de la sobreestimulación; creatividad; y relaciones más profundas, porque doy lo que realmente soy. Me vuelvo protagonista de mi vida y no espectador reactivo.",
+p:"El beneficio de fondo es el don: la soledad fecunda no es un fin en sí misma. Si no sé quién soy, no sé qué estoy entregando."},
+{t:3,k:"Concepto",q:"Cuando estoy solo, ¿qué hago? ¿Qué es la existencia reactiva?",
+a:"La existencia reactiva es vivir respondiendo a estímulos (notificaciones, redes, ruido, urgencias) sin espacios de silencio. La sobreestimulación hace difícil entrar en la propia interioridad: tomamos decisiones importantes sin pensarlas y armamos relaciones superficiales porque no nos detenemos a preguntarnos quiénes somos.",
+p:"Explica por qué hoy cuesta tanto la soledad fecunda: no es falta de tiempo, es que llenamos cada espacio."},
+{t:3,k:"Recurso",q:"Rincón (Milo J): ¿cuál es el contexto, qué emociones transmite y por qué dice que su comodidad está en la soledad?",
+a:"Habla desde la pérdida de alguien que ya no está en su vida y a quien tuvo que dejar ir. Describe noches difíciles, colores que se vuelven grises, insomnio y la sensación de no tener dónde escapar. <b>Emociones:</b> tristeza, nostalgia, cansancio, vacío, resignación. La soledad aparece como lugar cómodo porque es un <b>refugio</b>: estar solo lo protege de volver a ser herido o decepcionado.",
+p:"Por eso se acerca más a la soledad de aislamiento: nace de una herida no resuelta y funciona como encierro. Aun así hay honestidad consigo mismo, que podría ser una puerta hacia la soledad fecunda.",
+s:"Usa la distinción clave: refugiarse (huir hacia adentro para no sentir) no es lo mismo que recogerse (entrar en uno mismo para comprender)."},
+{t:3,k:"Recurso",q:"Hirayama (Perfect Days): ¿qué hace cuando está solo? ¿Su soledad significa estar siempre bien?",
+a:"Limpia baños públicos en Tokio y vive con una rutina sencilla: lee antes de dormir, escucha casetes, fotografía la luz entre los árboles, cuida sus plantas y disfruta el silencio. Está solo pero no aislado: es amable, se fija en los demás y recibe a su sobrina. Su soledad <b>no</b> significa estar siempre bien: la película deja ver heridas familiares y termina con él emocionado, entre la sonrisa y las lágrimas.",
+p:"Es el ejemplo de soledad fecunda: elegida, atenta y abierta a otros. Y muestra que la soledad fecunda no elimina el dolor: da espacio para habitarlo."},
+{t:3,k:"Recurso",q:"Cartas a un joven poeta (Rilke) y Rincón: ¿qué diferencia hay entre ambas soledades?",
+a:"Rilke le aconseja al joven que deje de buscar aprobación afuera, entre en sí mismo y ame su soledad aunque le pese, porque allí madura lo propio; también le pide paciencia con las preguntas sin respuesta. Es una soledad <b>elegida y fecunda</b>. En Rincón, la soledad llega tras una pérdida y funciona como refugio para no sufrir más: está <b>más cerca del aislamiento</b>.",
+p:"Ambos están solos, pero con distinto sentido: uno busca y crece; el otro se protege y se encierra."},
+{t:3,k:"Bitácora",q:"¿En qué momentos de mi vida desarrollo una soledad fecunda? ¿Qué hábito la dificulta?",
+a:"<b>Modelo:</b> \"Cuando camino de vuelta a casa sin audífonos y pienso en cómo me fue, y cuando escribo la bitácora. Lo que más me lo dificulta es tomar el celular apenas tengo un minuto libre: nunca me quedo con lo que siento. Me propongo dejar quince minutos al día sin pantalla.\" Identifica un hábito que favorece, uno que dificulta y una acción concreta.",
+p:"El indicador pide identificar hábitos: nombrar uno de cada tipo te asegura ese puntaje."},
+{t:3,k:"Concepto",q:"¿Por qué el autoconocimiento es condición del don?",
+a:"Porque solo puedo entregar lo que conozco de mí. Si no sé quién soy, qué siento ni qué valoro, mi entrega es confusa: doy por quedar bien, por miedo o por costumbre. La soledad fecunda es el \"taller interior\" donde me preparo para darme a otros de verdad.",
+p:"Une la Semana 9 con las semanas 7 y 8: el amor es donación, y nadie da lo que no conoce de sí."},
+
+{t:4,k:"Concepto",q:"¿Por qué existe el dolor?",
+a:"Desde la filosofía no hay una explicación completa: el dolor está asociado al misterio. La tradición bíblica (Génesis) lo presenta como parte de la condición humana. Lo que sí podemos afirmar es que está <b>unido al amor</b>: si no amáramos, no sufriríamos. Sufrimos porque somos vulnerables: amamos y podemos perder, esperamos y podemos frustrarnos.",
+p:"El sufrimiento revela que algo nos importa. Por eso la pregunta útil no es solo \"¿por qué?\", sino \"¿qué hago con él?\"."},
+{t:4,k:"Concepto",q:"¿Qué tipos de dolor existen?",
+a:"Dos. El <b>dolor de fragilidad</b> viene de la condición humana (enfermedad, muerte, límites) y no tiene culpable. El <b>dolor causado por el mal del otro</b> viene de una acción injusta de otra persona (abandono, abuso, traición): tiene dimensión moral, hay un responsable y la víctima no es culpable.",
+p:"Confundirlos tiene consecuencias graves: si trato un abuso como \"cosas de la vida\", normalizo el mal y libero al responsable; si busco culpables en una enfermedad, quedo atrapado en la rabia o me culpo a mí; y si culpo a la víctima, la daño dos veces."},
+{t:4,k:"Concepto",q:"¿Cuáles son las tres maneras de relacionarse con el dolor? ¿Cuál abre crecimiento personal?",
+a:"<b>Negar</b>: actuar como si no doliera; protege a corto plazo, pero impide aprender. <b>Instalarse</b>: reconocer el dolor, pero convertirlo en el centro de la vida, creando una identidad de víctima permanente. <b>Integrar</b>: reconocer el sufrimiento con honestidad, sin minimizarlo ni absolutizarlo, e incorporarlo a la propia historia como experiencia que orienta el crecimiento. Abre crecimiento la tercera: integrar.",
+p:"Integrar es la única que sostiene dos verdades juntas: el dolor es real (no lo niego) y no es todo lo que soy (no me instalo). Negar minimiza y deja el dolor sin procesar; instalarse lo absolutiza y quita libertad. Frankl: no siempre elegimos lo que nos pasa, pero sí la actitud con que lo enfrentamos.",
+s:"Da un ejemplo de clase para cada una: negar (Alegría apartando a Tristeza), instalarse (\"a mí siempre me pasa\"), integrar (Mencarelli, Riley al final)."},
+{t:4,k:"Concepto",q:"¿Debemos enfrentar todos los dolores de la misma manera?",
+a:"No. Primero hay que distinguir el tipo. Ante el <b>dolor de fragilidad</b> (una enfermedad, una muerte) corresponde aceptar el límite, acompañar y buscar sentido. Ante el <b>dolor causado por otro</b>, además, hay que reconocer la injusticia, nombrar al responsable, protegerse y, con el tiempo, quizá perdonar sin negar la justicia. En ambos casos, la actitud que hace crecer es integrar.",
+p:"Una sola respuesta para todo lleva a errores: resignarse ante un abuso o buscar culpables donde no los hay."},
+{t:4,k:"Recurso",q:"Niño (Milo J): ¿qué intenta describir? ¿El dolor es provocado por la vida o por otra persona?",
+a:"Un adulto le habla al niño que fue. Recuerda una infancia con paisajes y cariño, pero también con heridas: la pena de su madre, el miedo al abandono, la tensión cuando le hablan del padre y la dureza de crecer con carencias. Hacia el final aparece la esperanza: ve luz en medio de los males. El dolor es <b>mixto</b>: hay fragilidad (pobreza, infancia perdida) y heridas causadas por otros (abandono, conflictos familiares).",
+p:"La canción muestra un movimiento de integración: en vez de negar ese pasado o quedarse atrapado en él, el adulto lo mira con ternura y lo acompaña."},
+{t:4,k:"Recurso",q:"Intensamente: ¿qué descubre Riley cuando permite que aparezca la tristeza? ¿Qué pasa si la evitamos siempre? ¿Puede una emoción dolorosa cumplir una función?",
+a:"Alegría intenta mantener a Tristeza lejos. Riley se va apagando, se desconecta de lo que la definía y llega a intentar escaparse. Cuando por fin deja aparecer la tristeza, llora con sus padres, les dice que extraña su vida anterior y recibe consuelo. Descubre que la tristeza no es enemiga: le permite expresar lo que perdió, pedir ayuda y reconectarse con su familia. Evitarla siempre es <b>negar</b>, y produce desconexión. Sí, una emoción dolorosa cumple funciones: señala una pérdida, nos mueve a pedir ayuda, despierta la empatía de otros y permite procesar.",
+p:"Es la prueba de que integrar no es \"estar feliz\": es dejar que el dolor diga lo que tiene que decir."},
+{t:4,k:"Recurso",q:"Esteban Paredes: ¿qué tipo de dolor vivió y qué hizo con él?",
+a:"Ha contado que a los 5 años sus padres se separaron, su madre se fue y no la volvió a ver en años, y que vivió de cerca la profunda pena de su padre. Es sobre todo un <b>dolor causado por otros</b> (abandono): tiene dimensión moral y él, siendo niño, no tuvo culpa. Reconoce que la herida lo endureció y le costó ser cariñoso. Con el tiempo se reencontró con su madre, dice no guardarle rencor y, como padre, mira su historia de otra forma.",
+p:"Es un camino hacia la integración: no lo niega (lo cuenta públicamente) ni se instala (no vive del rencor), aunque la herida dejó huella. Integrar es un proceso.",
+s:"Contrasta con lo que habría sido instalarse (\"por culpa de ella nunca voy a poder querer\"). Revisa también los detalles que se vieron en el video de clase."},
+{t:4,k:"Recurso",q:"Tierra de penumbras: ¿qué tipo de dolor muestra la escena?",
+a:"<b>Dolor de fragilidad.</b> Joy, la esposa de C. S. Lewis, enferma y muere. La escena muestra la reacción de su hijo ante la enfermedad de su madre: no hay culpable ni respuesta fácil, ni explicación que la arregle.",
+p:"Ilustra que el dolor está unido al amor: se sufre tanto porque se ama. Una idea de Lewis que conecta: el dolor de ahora es parte de la felicidad de antes."},
+{t:4,k:"Recurso",q:"La casa de las miradas (Daniele Mencarelli): ¿por qué es un ejemplo de integración?",
+a:"Daniele era un joven poeta en crisis que huía de su dolor con el alcohol (<b>negar</b>). Consigue trabajo en el aseo de un hospital pediátrico en Roma, y el sufrimiento de los niños lo obliga a hacerse las preguntas que evitaba. En vez de seguir huyendo, mira el dolor de frente, y eso lo lleva a renacer (<b>integrar</b>).",
+p:"El dolor no desaparece, pero deja de ser algo de lo que se escapa y se vuelve camino de sentido."},
+{t:4,k:"Bitácora",q:"Reflexionando sobre mi experiencia del dolor: ¿qué tipo de dolor me afecta más? ¿Tengo alguna herramienta para integrarlo o solo lo evito?",
+a:"<b>Modelo:</b> nombra el tipo (fragilidad o causado por otro), reconoce tu forma habitual (\"tiendo a negar: me lleno de trabajo para no pensar\") y propone una herramienta concreta de integración: hablarlo con alguien de confianza, escribirlo, darle tiempo, pedir ayuda profesional si hace falta.",
+p:"Se evalúa que uses las categorías del curso para mirarte, no que cuentes detalles íntimos. Puedes ser honesto sin exponer más de lo que quieras."},
+
+{t:5,k:"Concepto",q:"¿Qué lugar tiene el consumo de cosas en mi vida? ¿Qué busco cuando compro?",
+a:"Las cosas son necesarias: comida, ropa, herramientas de trabajo. El problema no está en ellas, sino en lo que les pido. Cuando compro algo que no necesito, muchas veces busco otra cosa: sentirme alguien (identidad), ser visto (estatus o reconocimiento), pertenecer, calmar una emoción (ansiedad, aburrimiento, tristeza) o sentir control.",
+p:"Las cosas no pueden responder la pregunta \"¿para qué vivo?\": esa se responde desde lo que soy, no desde lo que tengo. Por eso la satisfacción dura poco."},
+{t:5,k:"Recurso",q:"Rebeca: ¿qué emociones sentía antes de comprar y cuáles después?",
+a:"<b>Antes:</b> ansiedad, deseo intenso y la sensación de que el objeto la hará ser otra, más segura y admirada (la vitrina parece hablarle). <b>Al comprar:</b> euforia y alivio. <b>Después:</b> el efecto dura poco y aparecen la culpa, el vacío, las deudas y la necesidad de esconderlo, lo que la lleva a comprar otra vez.",
+p:"Es el ciclo del consumismo: el objeto promete un sentido que no puede dar, la emoción baja y se necesita otra compra."},
+{t:5,k:"Concepto",q:"¿Qué buscamos cuando compramos algo que no necesitamos?",
+a:"<b>Sustitutos de sentido</b>: identidad (\"soy alguien si tengo esto\"), estatus, reconocimiento o aprobación de otros, pertenencia a un grupo, alivio emocional o sensación de control. Le pedimos a la cosa algo que le corresponde a la persona.",
+p:"Por eso se puede tener mucho y seguir sintiéndose vacío: las cosas no pueden sostener el sentido de la vida."},
+{t:5,k:"Concepto",q:"¿Qué es el consumismo como lógica existencial?",
+a:"No es solo comprar mucho: es una forma de entender la vida en que el valor de la persona se mide por lo que tiene, muestra y acumula. Quien vive así pierde la referencia de lo que es en sí mismo y puede tener mucho y seguir sintiéndose vacío.",
+p:"Es \"existencial\" porque afecta cómo me entiendo y cómo valoro a los demás, no solo mi forma de gastar. Alguien con poco dinero también puede vivir en esta lógica."},
+{t:5,k:"Concepto",q:"¿Tengo cosas o las cosas me tienen?",
+a:"Las cosas me tienen cuando dependo de ellas para sentirme alguien: compro para calmarme, me siento menos si no tengo lo que otros muestran, me endeudo por apariencia, no puedo prestar ni compartir. Yo tengo las cosas cuando las uso, las comparto y puedo prescindir de ellas sin dejar de ser yo.",
+p:"El desafío no es eliminar las cosas, sino ordenarlas: que estén al servicio de la vida y no que la vida gire en torno a ellas. Eso es libertad respecto de los bienes.",
+s:"Agrega la dimensión social: el uso de lo que tengo afecta a quienes tienen menos."},
+{t:5,k:"Recurso",q:"La felicidad de las ratas y El dilema de las redes sociales: ¿qué muestran sobre el consumo?",
+a:"<b>La felicidad de las ratas</b> muestra una ciudad de ratas que corren tras la felicidad prometida por el consumo, las ofertas y el trabajo, y terminan atrapadas en una carrera sin fin. <b>El dilema de las redes sociales</b> muestra que las plataformas se diseñan para capturar nuestra atención: el usuario termina siendo el producto, y la exposición constante a lo que otros tienen alimenta el deseo de consumir.",
+p:"Ambos muestran que el consumismo no es solo una decisión individual: hay un sistema que empuja. Por eso hace falta interioridad y libertad para ordenar las cosas."},
+{t:5,k:"Bitácora",q:"Recuerda una compra reciente (que no sea comida). ¿Qué estabas buscando realmente? ¿Fue proporcional el costo con el bienestar que te hizo sentir?",
+a:"<b>Modelo:</b> \"Compré unas zapatillas caras que vi en redes. Las mías funcionaban; buscaba sentirme a la altura de mi grupo. La emoción me duró una semana y el gasto me apretó el mes, así que no fue proporcional. La próxima vez me voy a preguntar qué estoy buscando antes de comprar.\"",
+p:"Se evalúa que distingas necesidad real de sustituto de sentido en tu propio caso."},
+{t:5,k:"Síntesis",q:"¿Cómo definirías la clase de hoy?",
+a:"<b>Modelo:</b> una invitación a revisar qué le pido a las cosas. Son buenas y necesarias, pero cuando les pido identidad o sentido, terminan teniéndome. La libertad está en ordenarlas al servicio de la vida y de los demás.",
+p:"Una buena síntesis nombra la idea central y un concepto clave en dos o tres líneas."},
+
+{t:0,k:"Síntesis",q:"¿Qué has aprendido sobre la antropología que no conocías? (pregunta de cierre de todas las clases)",
+a:"<b>Modelo:</b> que la antropología no estudia solo culturas lejanas: se pregunta qué es la persona y cómo vivir a la altura de su dignidad. Aprendí que la persona vale por lo que es, no por lo que siente, produce o tiene; que amar es decidir; que reconocer al otro es más que tratarlo bien; que la soledad puede ser fecunda; que el dolor se puede integrar; y que las cosas tienen que estar en su lugar.",
+p:"Esta pregunta premia que conectes las clases entre sí. Usa el hilo de la unidad (pestaña Inicio)."},
+{t:0,k:"Síntesis",q:"¿Qué relación hay entre el amor, la soledad y el dolor?",
+a:"El amor es donación, pero nadie da lo que no conoce de sí: la soledad fecunda es condición del don. El dolor está unido al amor: sufrimos porque amamos. Y para integrar el dolor, sin negarlo ni instalarnos, necesitamos interioridad. Así, la soledad prepara el amor, el amor nos hace vulnerables al dolor, y el dolor integrado nos vuelve más capaces de amar y acompañar.",
+p:"Es la pregunta de integración más probable: une tres semanas con una sola idea, la persona se realiza dándose."}
+];
+
+/* ---------- ALTERNATIVAS ---------- */
+var Z=[
+{t:1,q:"Según lo visto en clase, el amor:",o:["Es una emoción intensa que aparece sin control","Integra razón, emoción y voluntad","Depende de que el otro nos convenga","Es lo mismo que la atracción física"],c:1,e:"El amor implica emociones, pero no se reduce a ellas: conocer (razón), sentir (emoción) y decidir (voluntad) trabajan juntos."},
+{t:1,q:"\"Nadie ama lo que no conoce\" destaca el papel de:",o:["La voluntad","La emoción","La razón","El sacrificio"],c:2,e:"Para amar a la persona real hay que conocerla: es el aporte de la razón. Por eso el amor crece con el trato."},
+{t:1,q:"\"Salgo de mi egocentrismo y busco el bien del otro\" define la característica de:",o:["Donación","Identificación","Reciprocidad","Compromiso"],c:0,e:"La donación es el centro del amor: poner el bien del otro por sobre el interés propio."},
+{t:1,q:"\"Reconozco a la persona amada como igual a mí, de la misma naturaleza\" corresponde a:",o:["Reciprocidad","Sacrificio","Identificación","Compromiso"],c:2,e:"Identificación: el otro está al mismo nivel de mi ser. Sin ella aparece el dominio o la idolatría."},
+{t:1,q:"Javiera dice: \"ya no siento lo mismo por mi mejor amiga, así que la amistad terminó\". Desde el curso:",o:["Tiene razón: sin sentimiento no hay amor","Confunde el amor con el sentimiento; el amor también es decisión","La amistad no es una forma de amor","Debe esperar que vuelva la emoción para decidir algo"],c:1,e:"El sentimiento cambia; la voluntad sostiene. \"Ya no siento lo mismo\" puede ser el momento en que el amor pasa a ser elegido."},
+{t:1,q:"La escena de Sam cargando a Frodo es ejemplo principalmente de:",o:["Amor por deleite","Amor como decisión, compromiso y sacrificio","Amor líquido","Lógica del uso"],c:1,e:"Sam está agotado y no \"tiene ganas\": lo sostiene la lealtad. Hay emoción, pero pesa más la decisión."},
+{t:1,q:"Verdadero o falso: \"Sacrificio, en el sentido del curso, significa aguantar cualquier trato para no perder a la pareja\".",o:["Verdadero","Falso"],c:1,e:"Falso. El sacrificio es una renuncia libre por el bien del otro. Tolerar maltrato no busca el bien de nadie: es una forma de amor tóxico."},
+{t:1,q:"En \"Un Ratito\", el otro aparece como:",o:["Alguien valioso en sí mismo","Algo que se disfruta por un momento","Un compañero para toda la vida","Un igual con quien hay compromiso"],c:1,e:"La canción plantea una relación pasajera, sin promesas: amor por deleite y emoción sin voluntad."},
+{t:2,q:"El amor por utilidad se caracteriza porque:",o:["Quiere el bien del otro por sí mismo","Se basa en el beneficio que obtengo del otro","Se basa en el placer que me causa","Es el más estable de los tres"],c:1,e:"El afecto depende de lo que el otro me sirve, por eso termina cuando deja de ser útil."},
+{t:2,q:"Lo central del caso de Camila es que:",o:["Sus compañeros son malas personas","La lógica del uso no necesita mala intención","Camila debió dejar de prestar apuntes","Los grupos de WhatsApp son negativos"],c:1,e:"Nadie quiso dañarla. Basta con no detenerse a ver al otro como persona para tratarlo como medio."},
+{t:2,q:"¿Qué lógica de relación respeta la dignidad de la persona?",o:["La del uso, porque ambos ganan","La del reconocimiento, porque valora al otro por quien es","Ambas por igual","Ninguna: depende del contexto"],c:1,e:"La dignidad es el valor de la persona por ser persona, no por su utilidad. Solo el reconocimiento la trata como fin."},
+{t:2,q:"Un técnico atiende rápido y sin errores a un cliente angustiado, pero sin mirarlo ni escucharlo. Según el curso:",o:["Cumple con el reconocimiento, porque resolvió el problema","Le falta reconocimiento: la excelencia técnica no basta si no ve a la persona","Es un ejemplo de amor de amistad","No hay nada que evaluar: es solo trabajo"],c:1,e:"\"La excelencia técnica carece de impacto real si no va unida a la capacidad de reconocer al otro como persona.\""},
+{t:2,q:"La relacionalidad constitutiva significa que:",o:["Las relaciones son opcionales para ser feliz","La relación con otros es parte de lo que somos; nadie se hace solo","Solo nos relacionamos por utilidad","Las relaciones deben formalizarse con contratos"],c:1,e:"Desde que nacemos dependemos de otros, y nuestra identidad se forma con quienes nos rodearon."},
+{t:2,q:"La diferencia entre conexión y vínculo es que el vínculo:",o:["Es más rápido y práctico","Se da solo por redes sociales","Es una relación elegida, con compromiso y presencia","Es lo mismo, con otro nombre"],c:2,e:"Las conexiones son funcionales e intercambiables; los vínculos se eligen y se sostienen con decisiones."},
+{t:3,q:"La soledad de aislamiento se define como:",o:["Un tiempo elegido para pensar","Un encierro involuntario, por miedo o heridas, que genera vacío","Estar sin pareja","Una búsqueda activa de interioridad"],c:1,e:"Empobrece porque desconecta del entorno y nace de heridas no resueltas."},
+{t:3,q:"La soledad fecunda es:",o:["Estar siempre feliz cuando se está solo","Evitar a los demás","Una búsqueda activa de interioridad","Ver series sin que nadie moleste"],c:2,e:"Allí surgen las preguntas auténticas, se procesan las emociones y se integran los valores."},
+{t:3,q:"\"Existencia reactiva\" se refiere a:",o:["Reaccionar con rabia","Vivir respondiendo a estímulos, sin silencio, por sobreestimulación","Hacer deporte","Tomar decisiones muy pensadas"],c:1,e:"La sobreestimulación desplaza la interioridad: decidimos sin pensar y armamos relaciones superficiales."},
+{t:3,q:"¿Cuál de estos hábitos favorece el autoconocimiento activo?",o:["Revisar el celular apenas despierto","Llevar audífonos todo el día","Caminar sin pantalla y escribir la bitácora","Hacer varias cosas a la vez para aprovechar el tiempo"],c:2,e:"Los espacios sin estímulos son los que permiten entrar en la interioridad."},
+{t:3,q:"Hirayama (Perfect Days) demuestra que:",o:["Vivir solo siempre es aislarse","Se puede estar solo sin estar aislado","La soledad fecunda elimina el dolor","Hay que evitar el trabajo sencillo"],c:1,e:"Vive solo, pero está atento y abierto a otros. Y su final emocionado muestra que la soledad fecunda no elimina el dolor."},
+{t:3,q:"El autoconocimiento es condición del don porque:",o:["Nos hace más interesantes","No puedo entregar lo que no conozco de mí","Evita que otros nos usen","Reemplaza las relaciones"],c:1,e:"Si no sé quién soy, no sé qué estoy entregando. La soledad fecunda es el taller donde preparo el don."},
+{t:3,q:"En \"Rincón\" (Milo J), la soledad funciona sobre todo como:",o:["Búsqueda elegida de crecimiento","Refugio ante una herida, más cercano al aislamiento","Celebración de la libertad","Un retiro espiritual"],c:1,e:"Surge tras una pérdida y lo protege de volver a ser herido: es encierro, no búsqueda."},
+{t:4,q:"Las tres formas de relacionarse con el dolor son:",o:["Negar, aceptar y olvidar","Sufrir, superar y olvidar","Negar, instalarse e integrar","Evitar, enfrentar y perdonar"],c:2,e:"Negar protege a corto plazo; instalarse crea identidad de víctima; integrar abre crecimiento."},
+{t:4,q:"Tomás terminó con su pareja. Sale todas las noches y repite \"estoy perfecto, no me afectó\". Su actitud es:",o:["Integrar","Negar","Instalarse","Sacrificio"],c:1,e:"Actúa como si no doliera y se distrae sin parar: protege a corto plazo, pero impide aprender."},
+{t:4,q:"Fernanda, dos años después de una traición, interpreta todo desde esa herida y dice \"a mí siempre me pasa\". Su actitud es:",o:["Negar","Integrar","Instalarse","Soledad fecunda"],c:2,e:"Reconoce el dolor, pero lo convierte en el centro de su vida: identidad de víctima permanente."},
+{t:4,q:"Integrar el dolor significa:",o:["Olvidarlo lo antes posible","Pensar solo en lo positivo","Reconocerlo con honestidad, sin minimizarlo ni absolutizarlo, e incorporarlo a la propia historia","No hablar de él para no preocupar a otros"],c:2,e:"Integrar no es olvidar ni \"pensar positivo\" (eso sería minimizar, una forma de negar)."},
+{t:4,q:"El dolor causado por el mal del otro se caracteriza porque:",o:["No tiene culpable","Tiene dimensión moral: hay un responsable y la víctima no es culpable","Es igual al dolor de una enfermedad","Siempre se supera solo"],c:1,e:"Distinguirlo del dolor de fragilidad evita normalizar el mal o culpar a la víctima."},
+{t:4,q:"La escena de Tierra de penumbras ejemplifica:",o:["Dolor causado por el mal del otro","Dolor de fragilidad: sin culpable y sin respuesta fácil","La lógica del uso","Consumismo"],c:1,e:"La enfermedad y muerte de Joy son parte de la condición humana: nadie es culpable."},
+{t:4,q:"En Intensamente, cuando se evita permanentemente la tristeza:",o:["Riley se siente cada vez mejor","Riley se desconecta y llega a intentar escaparse","Nada cambia","Riley se vuelve más sociable"],c:1,e:"Negar la tristeza produce desconexión. Cuando por fin la deja aparecer, pide ayuda y se reconecta."},
+{t:4,q:"\"Si no amásemos, no sufriríamos\" significa que:",o:["Es mejor no amar para no sufrir","El dolor está unido al amor: sufrimos porque algo nos importa","El amor siempre causa dolor","El dolor es castigo por amar"],c:1,e:"El sufrimiento está vinculado a lo que hace significativa la vida. No es una invitación a dejar de amar."},
+{t:5,q:"El consumismo como lógica existencial consiste en:",o:["Comprar solo lo necesario","Medir el valor de la persona por lo que tiene, muestra y acumula","Ahorrar para el futuro","Comprar productos nacionales"],c:1,e:"No es solo una conducta de compra: es una forma de entenderse a uno mismo y a los demás."},
+{t:5,q:"Frente a las cosas, el curso plantea que el desafío es:",o:["Eliminarlas de nuestra vida","Ordenarlas al servicio de la vida","Acumular por seguridad","Comprar solo marcas reconocidas"],c:1,e:"Las cosas son buenas y necesarias; el problema es atribuirles un significado que excede su función."},
+{t:5,q:"Diego compra un celular nuevo cada año, aunque el anterior funciona, para que en su grupo \"lo tomen en cuenta\". Ese celular es:",o:["Una necesidad real","Un sustituto de reconocimiento","Uso responsable de los bienes","Una inversión"],c:1,e:"Le pide al objeto algo que le corresponde a la persona: ser visto y valorado."},
+{t:5,q:"\"Compré algo que quería hace tiempo y al día siguiente ya no me parecía tan especial.\" Esto se explica porque:",o:["Compró algo de mala calidad","Las cosas no pueden sostener el sentido; nos acostumbramos y buscamos otra","Debió comprar algo más caro","Es un problema solo de personas con mucho dinero"],c:1,e:"El objeto prometía más de lo que puede dar. La psicología lo llama adaptación hedónica."},
+{t:5,q:"La dimensión social del uso de los bienes indica que:",o:["Lo que hago con lo mío no afecta a nadie","El uso de lo que tengo afecta a quienes tienen menos","Hay que mostrar lo que se tiene","Solo el Estado debe preocuparse de la pobreza"],c:1,e:"Ordenar las cosas incluye pensar en los demás: compartir, no ostentar, no desperdiciar."},
+{t:5,q:"Verdadero o falso: \"Una persona con pocos recursos no puede vivir en la lógica consumista\".",o:["Verdadero","Falso"],c:1,e:"Falso. El consumismo es una forma de medir el valor personal por lo que se tiene o se desea tener, y no depende del dinero disponible."},
+{t:0,q:"¿Qué idea une las cinco semanas de la unidad?",o:["La felicidad depende de las emociones","La persona vale por lo que es, no por lo que siente, produce o tiene","Hay que evitar el dolor a toda costa","Las relaciones deben ser útiles"],c:1,e:"Cada clase desarma una medida falsa de la persona: el sentimiento, la utilidad, el estímulo, la herida y la posesión."}
+];
+
+/* ---------- DESARROLLO ---------- */
+var D=[
+{t:1,q:"Explica por qué el amor no termina automáticamente cuando cambia el sentimiento. Usa un ejemplo.",
+r:["Define el amor como integración de razón, emoción y voluntad","Distingue emoción o sentimiento de decisión","Explica que el sentimiento cambia y la voluntad sostiene","Usa un ejemplo concreto (Sam, familia, amistad)","Menciona al menos una característica (compromiso, donación…)","Cierra con una conclusión propia o un límite (no tolerar violencia)"],
+m:"Desde la antropología, el amor no es solo un sentimiento: es una acción libre que integra razón (conozco al otro), emoción (lo siento) y voluntad (decido buscar su bien). La emoción es breve y espontánea; el sentimiento es más estable, pero también cambia con el cansancio, la rutina o las crisis. Si el amor fuera solo eso, terminaría cada vez que cambia lo que siento. Lo que lo sostiene es la decisión: el compromiso de estar en las buenas y en las malas. Por ejemplo, Sam carga a Frodo cuando ya no tiene fuerzas; no lo hace porque tenga ganas, sino por lealtad. Lo mismo pasa en una amistad larga: hay épocas de menos entusiasmo y la amistad sigue porque se elige. Por eso \"ya no siento lo mismo\" puede ser el momento en que el amor madura: deja de depender de lo que me pasa y se vuelve elegido. Eso sí, decidir amar no significa tolerar maltrato, porque ahí no se busca el bien de nadie."},
+{t:2,q:"Un trabajador atiende a sus clientes pensando solo en cumplir su meta de ventas. Analiza el caso desde la lógica del uso y del reconocimiento, y argumenta cuál respeta la dignidad.",
+r:["Define la lógica del uso","Define la lógica del reconocimiento","Identifica cuál aparece en el caso y por qué","Explica qué es la dignidad (vale por sí misma, no por su utilidad)","Señala que el uso no necesita mala intención","Propone cómo sería la atención con reconocimiento"],
+m:"La lógica del uso trata al otro como medio: lo valora por lo que produce y lo descarta cuando deja de servir. La del reconocimiento lo valora por quien es. En el caso, el trabajador vive la lógica del uso: cada cliente es una venta para su meta, no una persona con una necesidad. No hace falta que tenga mala intención; basta con no detenerse a mirar al otro. La lógica que respeta la dignidad es la del reconocimiento, porque la dignidad es el valor que toda persona tiene por ser persona, no por lo que aporta; como dice Kant, hay que tratarla siempre como fin y nunca solo como medio. Con reconocimiento, el mismo trabajador escucharía qué necesita el cliente, le recomendaría lo que le sirve aunque venda menos y lo trataría por su nombre. Como plantea el curso, la excelencia técnica no tiene impacto real si no va unida a la capacidad de reconocer al otro como persona."},
+{t:3,q:"Contrasta la soledad de aislamiento con la soledad fecunda e identifica un hábito tuyo que dificulte y otro que favorezca el autoconocimiento.",
+r:["Define la soledad de aislamiento (encierro, miedo o heridas, vacío)","Define la soledad fecunda (búsqueda activa de interioridad)","Señala la diferencia de fondo (huida vs. búsqueda), no solo estar o no acompañado","Conecta con el don: no doy lo que no conozco","Nombra un hábito propio que dificulta","Nombra un hábito propio que favorece y una acción concreta"],
+m:"La soledad de aislamiento es un encierro involuntario: nace del miedo o de heridas no resueltas, genera vacío y me desconecta de los demás. La soledad fecunda es una búsqueda activa de interioridad: elijo estar conmigo para hacerme preguntas auténticas, procesar lo que siento e integrar mis valores. La diferencia no es estar o no acompañado, porque puedo estar aislado rodeado de gente, sino el sentido: una es huida y la otra es preparación para darme a otros, porque no puedo entregar lo que no conozco de mí. Un hábito mío que dificulta el autoconocimiento es tomar el celular en cada minuto libre: nunca me quedo con lo que siento, vivo en una existencia reactiva. Uno que lo favorece es caminar sin audífonos de vuelta a casa, donde ordeno el día. Me propongo dejar un momento diario sin pantalla."},
+{t:4,q:"Describe las tres formas de relacionarse con el dolor y argumenta cuál abre una posibilidad de crecimiento personal, usando un recurso de clase.",
+r:["Describe negar (y su costo)","Describe instalarse (identidad de víctima)","Describe integrar (honestidad sin minimizar ni absolutizar)","Argumenta por qué integrar abre crecimiento","Usa un recurso de clase bien interpretado","Distingue o menciona los tipos de dolor, o cita a Frankl, para profundizar"],
+m:"Ante el dolor hay tres actitudes. Negar es actuar como si no doliera: protege a corto plazo, pero impide aprender y el dolor vuelve. Instalarse es reconocer el dolor, pero convertirlo en el centro de la vida: se forma una identidad de víctima permanente y se pierde libertad. Integrar es reconocer el sufrimiento con honestidad, sin minimizarlo ni absolutizarlo, e incorporarlo a la propia historia como una experiencia que orienta el crecimiento. La que abre crecimiento es integrar, porque es la única que sostiene que el dolor es real y que no es todo lo que soy. Lo muestra Daniele Mencarelli en La casa de las miradas: huía de su dolor con el alcohol, que es negar, pero al trabajar en el aseo de un hospital de niños empieza a mirar el sufrimiento de frente y eso lo lleva a renacer. Como dice Frankl, no siempre elegimos lo que nos pasa, pero sí la actitud con que lo enfrentamos."},
+{t:5,q:"Analiza una compra tuya: ¿respondía a una necesidad real o a un sustituto de sentido? Contrástala con una relación libre y ordenada con los bienes.",
+r:["Describe una compra concreta","Identifica qué buscaba realmente","Evalúa si el costo fue proporcional al bienestar","Explica qué es un sustituto de sentido o el consumismo como lógica existencial","Describe una relación libre y ordenada con los bienes","Menciona la dimensión social o una acción concreta"],
+m:"Hace poco compré unos audífonos caros que vi en redes, aunque los míos funcionaban. Siendo honesto, buscaba sentirme a la par de mis compañeros: era un sustituto de reconocimiento, no una necesidad real. La emoción me duró pocos días y el gasto me apretó el mes, así que no fue proporcional al bienestar. El curso plantea que el problema no son las cosas, sino atribuirles un significado que excede su función: identidad, estatus o reconocimiento. Eso es el consumismo como lógica existencial: medir mi valor por lo que tengo y muestro. Una relación libre y ordenada con los bienes sería usarlos para vivir, compartirlos y poder prescindir de ellos sin sentirme menos, pensando también en quienes tienen menos. Antes de comprar, me voy a preguntar qué estoy buscando realmente."},
+{t:0,q:"¿Qué relación hay entre el amor, la soledad y el dolor según lo visto en la unidad?",
+r:["Presenta el amor como donación o decisión","Presenta la soledad fecunda como condición del don","Explica que el dolor está unido al amor","Explica que integrar el dolor requiere interioridad","Construye una conclusión que una las tres ideas"],
+m:"Las tres están unidas por la idea de que la persona se realiza dándose. El amor es donación: buscar el bien del otro por decisión, no solo por sentimiento. Pero nadie da lo que no conoce de sí: por eso la soledad fecunda, como espacio de interioridad, es condición del don. Y el dolor está unido al amor: sufrimos porque amamos y podemos perder. Para integrar ese dolor, sin negarlo ni instalarnos en él, también necesitamos interioridad, porque es en el silencio donde lo reconocemos y le damos un lugar en nuestra historia. Así, la soledad prepara el amor, el amor nos hace vulnerables al dolor y el dolor integrado nos vuelve más capaces de amar y acompañar a otros."}
+];
+
+/* ---------- GLOSARIO ---------- */
+var G=[
+[1,"Amor (antropológico)","Acción libre que surge ante el bien de otra persona y busca su bien; integra razón, emoción y voluntad."],
+[1,"Emoción","Reacción espontánea, breve y muy corporal ante un estímulo. No la elijo."],
+[1,"Sentimiento","Estado afectivo más estable y consciente que la emoción; se puede cultivar."],
+[1,"Identificación","Reconocer al amado como igual a mí, de la misma naturaleza y dignidad."],
+[1,"Donación","Salir del egocentrismo y buscar el bien del otro por sobre el interés propio."],
+[1,"Reciprocidad","Correspondencia y correlación entre quienes se aman."],
+[1,"Compromiso","Lealtad y fidelidad: promesa de estar en las buenas y en las malas."],
+[1,"Sacrificio","Disposición a renunciar libremente a algo propio por el bien del otro. No es tolerar maltrato."],
+[1,"Amor líquido","Término de Bauman: relaciones frágiles que se desarman cuando dejan de satisfacer."],
+[1,"Amor tóxico","Relación de control, celos, aislamiento o dependencia; falla la identificación y la donación."],
+[2,"Relacionalidad constitutiva","La relación con otros es parte de lo que somos: nadie se hace solo."],
+[2,"Amor por utilidad","Afecto basado en el beneficio que obtengo del otro; se acaba cuando deja de servir."],
+[2,"Amor por deleite","Afecto basado en el placer o la diversión que el otro me causa."],
+[2,"Amor de amistad","Querer el bien del otro como bien en sí mismo, no como medio."],
+[2,"Lógica del uso","Tratar al otro como herramienta; valorarlo por lo que produce. No necesita mala intención."],
+[2,"Lógica del reconocimiento","Valorar al otro por quien es, no por lo que me produce."],
+[2,"Dignidad","Valor que toda persona tiene por ser persona; no depende de su utilidad ni de su rendimiento."],
+[2,"Conexión","Contacto funcional, rápido e intercambiable."],
+[2,"Vínculo auténtico","Relación elegida, con presencia y compromiso, construida con decisiones firmes."],
+[3,"Existencia reactiva","Vivir respondiendo a estímulos sin silencio; la sobreestimulación desplaza la interioridad."],
+[3,"Interioridad","Espacio interior donde la persona se piensa, se siente y decide."],
+[3,"Autoconocimiento activo","Buscar conocerse: hacerse preguntas, nombrar lo que se siente, revisar los valores."],
+[3,"Soledad de aislamiento","Encierro involuntario por miedo o heridas no resueltas que genera vacío y desconexión."],
+[3,"Soledad fecunda","Búsqueda activa de interioridad donde surgen preguntas auténticas, se procesan emociones y se integran valores."],
+[3,"Autoconocimiento como condición del don","No puedo entregar lo que no conozco de mí."],
+[4,"Fragilidad humana","Somos vulnerables: amamos y podemos perder, esperamos y podemos frustrarnos."],
+[4,"Dolor de fragilidad","Dolor que viene de la condición humana (enfermedad, muerte, límites); no tiene culpable."],
+[4,"Dolor por el mal del otro","Dolor causado por una acción injusta de otro; tiene dimensión moral y la víctima no es culpable."],
+[4,"Negar","Actuar como si el dolor no existiera; protege a corto plazo pero impide aprender."],
+[4,"Instalarse","Reconocer el dolor pero hacerlo el centro de la vida; crea identidad de víctima permanente."],
+[4,"Integrar","Reconocer el sufrimiento con honestidad, sin minimizarlo ni absolutizarlo, e incorporarlo a la propia historia."],
+[4,"Sentido del sufrimiento","El dolor puede orientar el crecimiento cuando se integra; no elegimos todo lo que pasa, sí la actitud (Frankl)."],
+[5,"Consumismo como lógica existencial","Medir el valor de la persona por lo que tiene, muestra y acumula."],
+[5,"Sustituto de sentido","Comprar para llenar una carencia: identidad, estatus, reconocimiento, alivio emocional."],
+[5,"Uso responsable de los bienes","Usar las cosas al servicio de la vida, compartirlas y considerar a quienes tienen menos."],
+[5,"Libertad respecto de las cosas","Poder usar, compartir y prescindir de las cosas sin dejar de sentirse uno mismo."],
+[5,"Adaptación hedónica","Nos acostumbramos rápido a lo nuevo y el bienestar de una compra se apaga."]
+];
+
+/* ---------- utils ---------- */
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+function store(k,v){try{if(v===undefined){var x=localStorage.getItem(k);return x?JSON.parse(x):null}localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+function chip(t,label){return '<span class="chip" data-t="'+t+'">'+(label||TEMAS[t])+'</span>'}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+
+/* ---------- tabs ---------- */
+var VIEWS=["inicio","temas","mapas","preguntas","prueba","glosario"];
+function show(v){
+  if(VIEWS.indexOf(v)<0)v="inicio";
+  VIEWS.forEach(function(x){var p=$("#v-"+x);if(p)p.hidden=(x!==v);var t=$("#tab-"+x);if(t)t.setAttribute("aria-selected",x===v?"true":"false")});
+  store("ant-view",v);
+}
+$$(".tab").forEach(function(b){b.addEventListener("click",function(){show(b.getAttribute("data-view"));var nav=$(".nav");window.scrollTo({top:Math.max(0,nav.offsetTop-0),behavior:"smooth"})})});
+var h=(location.hash||"").replace("#","");
+show(VIEWS.indexOf(h)>=0?h:(store("ant-view")||"inicio"));
+window.addEventListener("hashchange",function(){var x=location.hash.replace("#","");if(VIEWS.indexOf(x)>=0)show(x)});
+
+/* ---------- sub tabs (temas, mapas) ---------- */
+function subGroup(container,attr,panelAttr,key){
+  var btns=$$("[data-"+attr+"]",container);
+  function pick(val){
+    btns.forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-"+attr)===val?"true":"false")});
+    $$("[data-"+panelAttr+"]").forEach(function(p){p.hidden=p.getAttribute("data-"+panelAttr)!==val});
+    store(key,val);
+  }
+  btns.forEach(function(b){b.addEventListener("click",function(){pick(b.getAttribute("data-"+attr))})});
+  pick(store(key)||btns[0].getAttribute("data-"+attr));
+}
+subGroup($("#temaSubs"),"tema","tema-panel","ant-tema");
+subGroup($("#mapSubs"),"map","map-panel","ant-map");
+
+/* ---------- preguntas ---------- */
+var qFilter="all";
+function filterBar(el,cur,cb){
+  var opts=[["all","Todas"],["1","S7"],["2","S8"],["3","S9"],["4","S10"],["5","S11"],["0","Integración"]];
+  el.innerHTML=opts.map(function(o){return '<button type="button" class="sub" '+(o[0]!=="all"?'data-t="'+o[0]+'" ':'')+'data-f="'+o[0]+'" aria-pressed="'+(o[0]===cur?"true":"false")+'">'+o[1]+'</button>'}).join("");
+  $$("[data-f]",el).forEach(function(b){b.addEventListener("click",function(){$$("[data-f]",el).forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});cb(b.getAttribute("data-f"))})});
+}
+function renderQ(){
+  var list=Q.filter(function(x){return qFilter==="all"||String(x.t)===qFilter});
+  $("#qCount").textContent=list.length+(list.length===1?" pregunta":" preguntas");
+  $("#qList").innerHTML=list.map(function(x){
+    return '<article class="qcard" data-t="'+x.t+'"><div class="meta">'+chip(x.t)+'<span class="chip plain">'+esc(x.k)+'</span></div><h3>'+esc(x.q)+'</h3>'+
+    '<details class="ans"><summary>Ver respuesta completa</summary><div class="abody">'+
+    '<div class="ablock"><span class="lbl">Respuesta</span><p>'+x.a+'</p></div>'+
+    '<div class="ablock p"><span class="lbl">¿por qué?</span><p>'+x.p+'</p></div>'+
+    (x.s?'<div class="ablock s"><span class="lbl">Para el 7</span><p>'+x.s+'</p></div>':'')+
+    '</div></details></article>';
+  }).join("");
+}
+filterBar($("#qFilters"),"all",function(f){qFilter=f;renderQ()});
+renderQ();
+$("#qOpenAll").addEventListener("click",function(){$$("#qList details").forEach(function(d){d.open=true})});
+$("#qCloseAll").addEventListener("click",function(){$$("#qList details").forEach(function(d){d.open=false})});
+
+/* ---------- alternativas ---------- */
+var zFilter="all";
+var ans=store("ant-ans")||{};
+var order=Z.map(function(_,i){return i});
+function nota(p){var n=p<0.6?1+(p/0.6)*3:4+((p-0.6)/0.4)*3;return (Math.round(n*10)/10).toFixed(1).replace(".",",")}
+function updateScore(){
+  var ids=order.filter(function(i){return zFilter==="all"||String(Z[i].t)===zFilter});
+  var done=ids.filter(function(i){return ans[i]!==undefined});
+  var right=done.filter(function(i){return ans[i]===Z[i].c}).length;
+  $("#zRight").textContent=right+" / "+done.length;
+  $("#zBar").style.width=(ids.length?Math.round(done.length/ids.length*100):0)+"%";
+  $("#zNota").textContent=done.length?nota(right/done.length):"–";
+}
+function renderZ(){
+  var ids=order.filter(function(i){return zFilter==="all"||String(Z[i].t)===zFilter});
+  $("#zList").innerHTML=ids.map(function(i,n){
+    var x=Z[i],a=ans[i],answered=a!==undefined;
+    var opts=x.o.map(function(o,j){
+      var cls=answered?(j===x.c?" right":(j===a?" wrong":"")):"";
+      return '<button type="button" class="opt'+cls+'" data-q="'+i+'" data-o="'+j+'"'+(answered?" disabled":"")+'><span class="l">'+"abcd"[j]+')</span><span>'+esc(o)+'</span></button>';
+    }).join("");
+    var fb=answered?'<div class="fb '+(a===x.c?"ok":"no")+'"><b>'+(a===x.c?"Correcta":"Incorrecta: la respuesta es "+"abcd"[x.c]+")")+'</b>'+esc(x.e)+'</div>':"";
+    return '<article class="qitem" data-t="'+x.t+'"><div class="row"><span class="num">'+(n+1)+'.</span>'+chip(x.t)+'</div><h3 style="font-size:1.05rem">'+esc(x.q)+'</h3><div class="opts">'+opts+'</div>'+fb+'</article>';
+  }).join("");
+  $$("#zList .opt").forEach(function(b){b.addEventListener("click",function(){
+    var i=+b.getAttribute("data-q"),j=+b.getAttribute("data-o");
+    if(ans[i]!==undefined)return; ans[i]=j; store("ant-ans",ans);
+    var card=b.closest(".qitem"); var x=Z[i];
+    $$(".opt",card).forEach(function(o,k){o.disabled=true;if(k===x.c)o.classList.add("right");else if(k===j)o.classList.add("wrong")});
+    var fb=document.createElement("div");fb.className="fb "+(j===x.c?"ok":"no");
+    fb.innerHTML='<b>'+(j===x.c?"Correcta":"Incorrecta: la respuesta es "+"abcd"[x.c]+")")+'</b>'+esc(x.e);
+    card.appendChild(fb); updateScore();
+  })});
+  updateScore();
+}
+filterBar($("#zFilters"),"all",function(f){zFilter=f;renderZ()});
+renderZ();
+$("#zReset").addEventListener("click",function(){
+  var ids=order.filter(function(i){return zFilter==="all"||String(Z[i].t)===zFilter});
+  ids.forEach(function(i){delete ans[i]}); store("ant-ans",ans); renderZ();
+});
+$("#zShuffle").addEventListener("click",function(){for(var i=order.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=order[i];order[i]=order[j];order[j]=t}renderZ()});
+
+/* ---------- desarrollo ---------- */
+var drafts=store("ant-drafts")||{};
+var checks=store("ant-checks")||{};
+$("#dList").innerHTML=D.map(function(x,i){
+  return '<article class="dev" data-t="'+x.t+'"><div class="row">'+chip(x.t)+'<span class="chip plain">Desarrollo '+(i+1)+'</span></div><h3 style="font-size:1.08rem">'+esc(x.q)+'</h3>'+
+  '<textarea id="draft-'+i+'" data-d="'+i+'" placeholder="Escribe tu respuesta aquí" aria-label="Tu respuesta">'+esc(drafts[i]||"")+'</textarea>'+
+  '<details class="ans"><summary>Ver pauta y respuesta modelo</summary><div class="abody">'+
+  '<div class="ablock"><span class="lbl">Pauta: marca lo que incluiste</span><ul class="rubric">'+
+  x.r.map(function(r,j){var id="chk-"+i+"-"+j;return '<li><label for="'+id+'"><input type="checkbox" id="'+id+'" data-c="'+i+'-'+j+'"'+(checks[i+"-"+j]?" checked":"")+'><span>'+esc(r)+'</span></label></li>'}).join("")+
+  '</ul><p class="level" id="lvl-'+i+'"></p></div>'+
+  '<div class="ablock p"><span class="lbl">respuesta modelo</span><div class="model">'+esc(x.m)+'</div></div>'+
+  '</div></details></article>';
+}).join("");
+function level(i){
+  var tot=D[i].r.length,c=0;for(var j=0;j<tot;j++)if(checks[i+"-"+j])c++;
+  var txt=c+" de "+tot+" criterios · ";
+  txt+= c===tot?"nivel de 7: está todo.": c>=tot-1?"muy bien (6+): revisa el criterio que falta.": c>=Math.ceil(tot/2)?"suficiente: agrega lo que falta para subir.":"incompleta: vuelve al tema en la pestaña Temas.";
+  $("#lvl-"+i).textContent=txt;
+}
+D.forEach(function(_,i){level(i)});
+$$("#dList textarea").forEach(function(t){t.addEventListener("input",function(){drafts[t.getAttribute("data-d")]=t.value;store("ant-drafts",drafts)})});
+$$("#dList input[type=checkbox]").forEach(function(c){c.addEventListener("change",function(){var k=c.getAttribute("data-c");checks[k]=c.checked;store("ant-checks",checks);level(+k.split("-")[0])})});
+
+/* ---------- prueba sub ---------- */
+$$("#pruebaSubs [data-mode]").forEach(function(b){b.addEventListener("click",function(){
+  var m=b.getAttribute("data-mode");
+  $$("#pruebaSubs [data-mode]").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+  $("#altPanel").hidden=m!=="alt"; $("#devPanel").hidden=m!=="dev";
+})});
+
+/* ---------- glosario ---------- */
+var cardMode=true;
+function renderG(){
+  var term=($("#gSearch").value||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  var list=G.filter(function(g){var s=(g[1]+" "+g[2]).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");return !term||s.indexOf(term)>=0});
+  $("#gCount").textContent=list.length+" conceptos";
+  $("#gGrid").innerHTML=list.map(function(g){
+    return '<button type="button" class="flash" data-t="'+g[0]+'" aria-expanded="'+(cardMode?"false":"true")+'"><span class="chip">'+TEMAS[g[0]]+'</span><b>'+esc(g[1])+'</b><span class="def"'+(cardMode?" hidden":"")+'>'+esc(g[2])+'</span><span class="hint"'+(cardMode?"":" hidden")+'>Toca para ver la definición</span></button>';
+  }).join("");
+  $$("#gGrid .flash").forEach(function(c){c.addEventListener("click",function(){
+    var d=$(".def",c),hn=$(".hint",c),open=d.hidden; d.hidden=!open; hn.hidden=open; c.setAttribute("aria-expanded",open?"true":"false");
+  })});
+}
+$("#gSearch").addEventListener("input",renderG);
+$("#gMode").addEventListener("click",function(){cardMode=!cardMode;this.setAttribute("aria-pressed",cardMode?"true":"false");this.textContent="Modo tarjetas: "+(cardMode?"activado":"desactivado");this.classList.toggle("primary",cardMode);renderG()});
+renderG();
+})();
+</script>
+
+</body>
+</html>
